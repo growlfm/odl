@@ -1,18 +1,17 @@
 import csv
 import os
 import json
-from cStringIO import StringIO
-from avro.schema import parse as Parse
+from io import StringIO
 
 import apache_beam as beam
 import apache_beam.transforms.window as window
 
-from odl.avro import downloads_schema
+from odl.avro import downloads_parsed
 
 
 def to_csv(item):
     """
-    Uses the csv lib to excape everything correctly.
+    Uses the csv lib to escape everything correctly.
     """
     buf = StringIO()
     w = csv.writer(buf)
@@ -34,7 +33,7 @@ class WriteCSV(beam.PTransform):
         path = os.path.join(self.file_path, self.name)
         return (items | 'ToCSV' >> beam.Map(to_csv)
                 | 'WriteCSV' >> beam.io.WriteToText(
-                    path, file_name_suffix='.csv', num_shards=1))
+                    path, file_name_suffix='.csv', shard_name_template=''))
 
 
 class Write(beam.PTransform):
@@ -51,7 +50,7 @@ class Write(beam.PTransform):
         path = os.path.join(self.file_path, self.name)
         return (items
                 | 'WriteCSV' >> beam.io.WriteToText(
-                    path, file_name_suffix='.txt', num_shards=1))
+                    path, file_name_suffix='.txt', shard_name_template=''))
 
 
 class WriteDownloads(beam.PTransform):
@@ -68,6 +67,6 @@ class WriteDownloads(beam.PTransform):
             'DownloadsGlobalWindow' >> beam.WindowInto(window.GlobalWindows())
             | beam.io.avroio.WriteToAvro(
                 path,
-                Parse(json.dumps(downloads_schema)),
+                downloads_parsed,
                 use_fastavro=True,
                 file_name_suffix='.avro'))

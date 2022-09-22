@@ -1,7 +1,7 @@
 """
 The beam transforms.
 
-many of these could just be functions, but we make them transforms so they can
+Many of these could just be functions, but we make them transforms so they can
 be easily imported into other pipelines if needed.
 """
 import re
@@ -100,16 +100,13 @@ class IsGoodDownload(beam.DoFn):
         events = element[1]
 
         # First thing is to filter out all the http_method that aren't a get.
-        events = filter(lambda evt: evt['http_method'].lower() == 'get',
-                        events)
+        events = [evt for evt in events if evt['http_method'].lower() == 'get']
 
         if len(events) == 0:
             yield beam.pvalue.TaggedOutput('bad', element)
         else:
             # Next determine if we got any non-streaming GET.
-            gets = filter(
-                lambda evt: not evt['byte_range_start'] and not evt['byte_range_end'],
-                events)
+            gets = [evt for evt in events if not evt['byte_range_start'] and not evt['byte_range_end']]
 
             if len(gets):
                 yield element
@@ -117,7 +114,7 @@ class IsGoodDownload(beam.DoFn):
                 # Throw out all the 2 byte requests and sum the rest.
                 byte_count = sum(
                     map(lambda evt: abs(evt['byte_range_end'] - evt['byte_range_start']),
-                        filter(lambda evt: evt['byte_range_end'] is not 1,
+                        filter(lambda evt: evt['byte_range_end'] != 1,
                                events)))
 
                 if byte_count > 0:
@@ -250,6 +247,10 @@ def to_odl_download(element):
         'episode_id': evt['episode_id'],
         'app': app
     }
+
+    if 'ip' in evt:
+        output['ip'] = evt['ip']
+
     return output
 
 
