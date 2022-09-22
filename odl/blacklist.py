@@ -7,13 +7,12 @@ DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
 
 def get_ranges():
-    with open(os.path.join(DIR_PATH, './data/datacenters.csv'),
-              'rb') as csvfile:
-        reader = csv.reader(csvfile)
+    input_path = os.path.join(DIR_PATH, './data/datacenters.csv')
+    with open(input_path) as input_file:
+        reader = csv.DictReader(input_file, fieldnames=['range_start', 'range_end', 'name', 'info_url'])
         for row in reader:
-            range_start, range_end, _, _ = row
-            yield (ipaddress.ip_address(unicode(range_start)),
-                   ipaddress.ip_address(unicode(range_end)))
+            yield (ipaddress.ip_address(row['range_start']),
+                   ipaddress.ip_address(row['range_end']))
 
 
 class Blacklist(object):
@@ -29,11 +28,7 @@ class Blacklist(object):
         if self._db is None:
             self._db = pytricia.PyTricia()
             for start, end in get_ranges():
-
-                for network in ipaddress.summarize_address_range(
-                        ipaddress.ip_address(unicode(start)),
-                        ipaddress.ip_address(unicode(end)),
-                ):
+                for network in ipaddress.summarize_address_range(start, end):
                     self._db.insert(str(network), '1')
 
         return str(ip) in self._db
