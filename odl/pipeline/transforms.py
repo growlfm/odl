@@ -100,27 +100,34 @@ class IsGoodDownload(beam.DoFn):
         events = element[1]
 
         # First thing is to filter out all the http_method that aren't a get.
-        events = [evt for evt in events if evt['http_method'].lower() == 'get']
+        gets = [evt for evt in events if evt['http_method'].lower() == 'get']
 
-        if len(events) == 0:
+        if len(gets) == 0:
             yield beam.pvalue.TaggedOutput('bad', element)
         else:
-            # Next determine if we got any non-streaming GET.
-            gets = [evt for evt in events if not evt['byte_range_start'] and not evt['byte_range_end']]
+            # Next determine if we got any full GET requests (i.e. not a partial (range) request).
+            full_reqs = [evt for evt in gets if not evt['byte_range_start'] and not evt['byte_range_end']]
 
-            if len(gets):
+            if len(full_reqs):
                 yield element
             else:
-                # Throw out all the 2 byte requests and sum the rest.
-                byte_count = sum(
-                    map(lambda evt: abs(evt['byte_range_end'] - evt['byte_range_start']),
-                        filter(lambda evt: evt['byte_range_end'] != 1,
-                               events)))
+                # There are only range requests for this element
 
-                if byte_count > 0:
+                # Determine if any range requests are unbounded - if so, count them as good download
+                start_only_reqs = [evt for evt in gets if not evt['byte_range_end']]
+                if len(start_only_reqs):
                     yield element
                 else:
-                    yield beam.pvalue.TaggedOutput('bad', element)
+                    # Throw out all the 2 byte requests and sum the rest.
+                    byte_count = sum(
+                        map(lambda evt: abs(evt['byte_range_end'] - evt['byte_range_start']),
+                            filter(lambda evt: evt['byte_range_end'] != 1,
+                                   gets)))
+
+                    if byte_count > 0:
+                        yield element
+                    else:
+                        yield beam.pvalue.TaggedOutput('bad', element)
 
 
 class CountByAttribute(beam.PTransform):
