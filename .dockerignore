@@ -1,0 +1,6 @@
+.env
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+setup.py
