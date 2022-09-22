@@ -8,18 +8,56 @@ oDL's goal is to move the podcast industry forward collectively by introducing a
 
 ## Quickstart
 
+### Docker (_preferred_)
+
+Note: Using `docker-compose`, a Docker volume is used to share files between host and container. Host path, `./shared/data` is mapped to the container path, `/var/lib/odl`.
+
+1. Place source events CSV file in `./shared/data/` directory.
+
+2. Execute 'odl' to generate analytics
+
+```
+$ docker-compose run odl python run.py /var/lib/odl/<source_file.csv>
+```
+
+Results are written to `./shared/data/<uid>` directory.
+
+Example:
+```
+$ mkdir -p ./shared/data
+$ cp events.csv ./shared/data
+$ docker-compose run odl python run.py /var/lib/odl/events.csv
+
+Creating odl_odl_run ... done
+Running the oDL pipeline from /tmp/odl/246af18d740d4f12b7b3b25b09548c8f.avro to /var/lib/odl/246af18d740d4f12b7b3b25b09548c8f
+
+oDL run complete.
+Downloads: 282
+
+/var/lib/odl/246af18d740d4f12b7b3b25b09548c8f/count.txt
+
+/var/lib/odl/246af18d740d4f12b7b3b25b09548c8f/hourly.csv
+
+/var/lib/odl/246af18d740d4f12b7b3b25b09548c8f/episodes.csv
+
+/var/lib/odl/246af18d740d4f12b7b3b25b09548c8f/apps.csv
+```
+
+### iPython
+
 oDL is in the comment phase of development. For now you'll need to clone from source.
 
 ```
 $ git clone git@github.com:open-downloads/odl.git && cd odl
-$ virtualenv .
-$ source bin/activate
-$ python setup.py install
+$ virtualenv venv
+$ source venv/bin/activate
+$ python -m pip install .
 $ ipython
 
 > from odl import prepare, pipeline
 > prepare.run('path/to/events-input.csv', 'path/to/events.odl.avro')
 > pipeline.run('path/to/events.odl.avro', 'path/to/events-output')
+
 Running the oDL pipeline from path/to/events.odl.avro to path/to/events-output
 
 oDL run complete.
@@ -176,15 +214,6 @@ The `odl` package uses Apache Beam under the hood to work on logfiles at any sca
 > pipeline.run('path/to/events.odl.avro', 'path/to/events-output')
 ```
 
-If you would like to run this through Google Cloud DataFlow on a large scale dataset, you would use the following:
-
-_Note: This costs money, since it's using Google Cloud Platform._
-
-```
-> pipeline.run('gs://events-bucket-name/events*',  
-  'gs://output-bucket-namep/events-output',
-  {"runner" : "DataflowRunner", 'project': 'gc-org-name'})
-```
 
 ## Closing
 

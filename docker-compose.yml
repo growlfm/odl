@@ -1,0 +1,17 @@
+version: "2.4"
+
+services:
+    odl:
+        working_dir: /opt/odl
+        build:
+            context: .
+        volumes:
+            - ./shared/data:/var/lib/odl
+
+    update:
+        working_dir: /opt/odl
+        build:
+            context: .
+        command: ["python", "update.py"]
+        volumes:
+            - ./tmp:/tmp

@@ -14,13 +14,10 @@ def get_ip_encoder(salt=None):
     """
     salt = salt and salt or uuid.uuid4().hex
 
-    if isinstance(salt, unicode):
-        salt = salt.encode('utf-8')
-
     def encode(ip):
         if not ip:
             raise ODLException('IP is required for encoding.')
 
-        return hashlib.md5('|'.join([ip.encode('utf-8'), salt])).hexdigest()
+        return hashlib.md5('|'.join([ip, salt]).encode('utf-8')).hexdigest()
 
     return encode
