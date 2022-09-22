@@ -19,5 +19,5 @@ setuptools.setup(
     install_requires=[
         'apache-beam==2.41.0', 'numpy==1.22.4', 'ipaddress', 'arrow',
         'udatetime', 'pytricia==1.0.2', 'fastavro==1.6.1', 'boto3==1.24.77',
-        'pandas==1.5.0'
+        'pandas==1.5.0', 'requests==2.28.1'
     ])
