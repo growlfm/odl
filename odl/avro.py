@@ -6,15 +6,14 @@ from fastavro import reader, writer, parse_schema
 
 # Used for the raw server events.
 events_schema = {
-    'doc':
-    'oDL Event Schema',
-    'name':
-    'oDL Events',
-    'namespace':
-    'odl',
-    'type':
-    'record',
+    'doc': 'oDL Event Schema',
+    'name': 'oDL Events',
+    'namespace': 'odl',
+    'type': 'record',
     'fields': [{
+        'name': 'ip',
+        'type': ['string', 'null']
+    }, {
         'name': 'encoded_ip',
         'type': 'string'
     }, {
@@ -37,20 +36,20 @@ events_schema = {
         'type': ["int", "null"]
     }],
 }
+
 events_parsed = parse_schema(events_schema)
 
-downloads_schema = parse_schema({
-    'doc':
-    'oDL Download Schema',
-    'name':
-    'oDL Downloads',
-    'namespace':
-    'odl',
-    'type':
-    'record',
+downloads_schema = {
+    'doc':'oDL Download Schema',
+    'name': 'oDL Downloads',
+    'namespace': 'odl',
+    'type': 'record',
     'fields': [{
         'name': 'id',
         'type': 'string'
+    }, {
+        'name': 'ip',
+        'type': ['string', 'null']
     }, {
         'name': 'encoded_ip',
         'type': 'string'
@@ -67,7 +66,7 @@ downloads_schema = parse_schema({
         'name': 'app',
         'type': 'string'
     }],
-})
+}
 
 downloads_parsed = parse_schema(downloads_schema)
 

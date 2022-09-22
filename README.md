@@ -12,14 +12,15 @@ oDL is in the comment phase of development. For now you'll need to clone from so
 
 ```
 $ git clone git@github.com:open-downloads/odl.git && cd odl
-$ virtualenv .
-$ source bin/activate
-$ python setup.py install
+$ virtualenv venv
+$ source venv/bin/activate
+$ python -m pip install .
 $ ipython
 
 > from odl import prepare, pipeline
 > prepare.run('path/to/events-input.csv', 'path/to/events.odl.avro')
 > pipeline.run('path/to/events.odl.avro', 'path/to/events-output')
+
 Running the oDL pipeline from path/to/events.odl.avro to path/to/events-output
 
 oDL run complete.
@@ -176,15 +177,6 @@ The `odl` package uses Apache Beam under the hood to work on logfiles at any sca
 > pipeline.run('path/to/events.odl.avro', 'path/to/events-output')
 ```
 
-If you would like to run this through Google Cloud DataFlow on a large scale dataset, you would use the following:
-
-_Note: This costs money, since it's using Google Cloud Platform._
-
-```
-> pipeline.run('gs://events-bucket-name/events*',  
-  'gs://output-bucket-namep/events-output',
-  {"runner" : "DataflowRunner", 'project': 'gc-org-name'})
-```
 
 ## Closing
 
