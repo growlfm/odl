@@ -1,4 +1,5 @@
 import argparse
+import os
 import uuid
 from pathlib import Path
 
@@ -27,8 +28,11 @@ if __name__ == "__main__":
     avro_output_path = '/tmp/odl/'
     Path(avro_output_path).mkdir(parents=True, exist_ok=True)
 
+    basename, ext = os.path.splitext(input_file)
+    fmt = ext.split('.').pop()
+
     avro_file = '{}{}.avro'.format(avro_output_path, uid)
-    prepare.run(input_file, avro_file)
+    prepare.run(input_file, avro_file, fmt)
 
     # Ensure output dir exists
     output_path = '{}{}'.format('/var/lib/odl/', uid);
