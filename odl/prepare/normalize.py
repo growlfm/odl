@@ -1,6 +1,7 @@
 import re
 import json
 import arrow
+import urllib.parse
 
 import fastavro
 
@@ -12,7 +13,15 @@ from odl.prepare.encode import get_ip_encoder
 
 
 def clean_string(value):
-    return value.strip()
+    if isinstance(value, str):
+        val = value.strip()
+        if (len(val)):
+            val = urllib.parse.unquote(val)
+        else:
+            val = None
+        return val
+
+    return value
 
 
 def clean_timestamp(value):
@@ -38,13 +47,22 @@ def clean_int(value):
     if isinstance(value, (int, float)):
         return int(value)
 
-    if isinstance(value, (str, unicode)):
-        return int(value.strip())
+    if isinstance(value, str):
+        val = value.strip()
+        if (len(val)):
+            val = int(val)
+        else:
+            val = None
+        return val
 
     raise ValueError("Invalid type {}".format(str(type('a'))))
 
 
 fields = {
+    "ip": {
+        "required": False,
+        "clean": clean_string
+    },
     "encoded_ip": {
         "required": True,
         "clean": lambda e: e
@@ -72,7 +90,7 @@ fields = {
     "byte_range_end": {
         "required": True,
         "clean": clean_int
-    },
+    }
 }
 
 snake_case_re = re.compile('((?<=[a-z0-9])[A-Z]|(?!^)[A-Z](?=[a-z]))')
@@ -90,7 +108,7 @@ default_mappings = {
     'encodedip': 'encoded_ip',
     'enclosureurl': 'episode_id',
     'enclosure_url': 'episode_id',
-    "method": "http_method"
+    'method': 'http_method'
 }
 
 
@@ -134,18 +152,16 @@ def verify(data, original):
     for field, meta in fields.items():
         value = data.get(field)
 
-        if meta['required'] and not value:
-            if field not in data:
-                raise ODLError("ODL requires the attribute {} {}".format(
-                    field, error_str))
+        if meta['required'] and field not in data:
+            raise ODLError("ODL requires the attribute {} {}".format(
+                field, error_str))
 
-        if value:
-            try:
-                value = meta['clean'](value)
-            except Exception, e:
-                raise ODLError('{} {}'.format(str(e), error_str))
+        try:
+            value = meta['clean'](value)
+        except Exception as e:
+            raise ODLError('{} {}'.format(str(e), error_str))
 
-            data[field] = value
+        data[field] = value
 
     return data
 
@@ -173,17 +189,15 @@ def clean(rows, mappings=None, salt=None):
             if key in fields.keys():
                 data[key] = value
 
-            if key == 'ip':
-                data[key] = value
-
         # We want to kill bad IPs here, otherwise we lose this ability
         # after we encode the ip.
         if 'ip' in data:
             if blacklist.is_blacklisted(data['ip']):
+                print("IP on deny list! IP = {}, user agent = {}".format(str(data['ip']), data['user_agent']))
                 continue
 
-            data['encoded_ip'] = ip_encoder(data['ip'])
-            del data["ip"]
+            if 'encoded_ip' not in data:
+                data['encoded_ip'] = ip_encoder(data['ip'])
 
         # make sure that we have everything we need.
         data = verify(data, row)
