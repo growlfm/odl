@@ -19,14 +19,6 @@ def _to_absolute_path(path):
     return os.path.join(os.getcwd(), path)
 
 
-def _move(output_path, file_name):
-    name, suffix = file_name.split('.')
-
-    shutil.move(
-        os.path.join(output_path, '{}-00000-of-00001.{}'.format(name, suffix)),
-        os.path.join(output_path, file_name))
-
-
 def run(path, output_path, options=None, offset=None):
     """
     Run the oDL pipeline.
@@ -92,13 +84,11 @@ def run(path, output_path, options=None, offset=None):
 
     if output_path.startswith('/'):
 
-        with open(os.path.join(output_path,
-                               'count-00000-of-00001.txt')) as file:
+        with open(os.path.join(output_path, 'count.txt')) as file:
             print("\noDL run complete.\nDownloads: {}".format(
                 file.read().strip()))
 
         for file_name in [
-                'count.txt', 'hourly.csv', 'episodes.csv', 'apps.csv'
+            'count.txt', 'hourly.csv', 'episodes.csv', 'apps.csv'
         ]:
-            _move(output_path, file_name)
             print("\n{}".format(os.path.join(output_path, file_name)))
