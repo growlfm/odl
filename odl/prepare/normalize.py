@@ -17,8 +17,7 @@ def clean_string(value):
         val = value.strip()
         if (len(val)):
             val = urllib.parse.unquote(val)
-        else:
-            val = None
+
         return val
 
     return value
@@ -40,7 +39,7 @@ def clean_timestamp(value):
         except:
             pass
 
-    raise ValueError("unable to parse timestamp {}".format(value))
+    raise ValueError("Unable to parse timestamp {}".format(value))
 
 
 def clean_int(value):
@@ -69,6 +68,7 @@ fields = {
     },
     "user_agent": {
         "required": True,
+        "default": "",
         "clean": clean_string
     },
     "http_method": {
@@ -90,6 +90,10 @@ fields = {
     "byte_range_end": {
         "required": True,
         "clean": clean_int
+    },
+    "range": {
+        "required": False,
+        "clean": clean_string
     }
 }
 
@@ -102,15 +106,17 @@ def to_snake_case(value):
 
 # mappings to make everything a bit easier.
 default_mappings = {
+    'time': 'timestamp',
     'ipaddress': 'ip',
     'ip_address': 'ip',
     'useragent': 'user_agent',
     'encodedip': 'encoded_ip',
+    'hashed_ip_address': 'encoded_ip',
     'enclosureurl': 'episode_id',
     'enclosure_url': 'episode_id',
+    'url': 'episode_id',
     'method': 'http_method'
 }
-
 
 def to_mapping(mappings):
     """
@@ -153,8 +159,11 @@ def verify(data, original):
         value = data.get(field)
 
         if meta['required'] and field not in data:
-            raise ODLError("ODL requires the attribute {} {}".format(
-                field, error_str))
+            if 'default' in meta:
+                value = meta['default']
+            else:
+                raise ODLError("ODL requires the attribute {} {}".format(
+                    field, error_str))
 
         try:
             value = meta['clean'](value)
@@ -164,6 +173,19 @@ def verify(data, original):
         data[field] = value
 
     return data
+
+
+def parse_range(value):
+
+    # Verify value matches required format
+    RANGE_VALUE_RE = 'bytes=([\d]+)\-([\d]*)'
+    value_re = re.compile(RANGE_VALUE_RE)
+    match = value_re.search(value)
+
+    if match is None:
+        raise ODLError("Value for `range`, {}, does not match expected format: {}".format(value, RANGE_VALUE_RE))
+
+    return match.group(1), match.group(2)
 
 
 def clean(rows, mappings=None, salt=None):
@@ -189,6 +211,17 @@ def clean(rows, mappings=None, salt=None):
             if key in fields.keys():
                 data[key] = value
 
+        # If 'range' key present, parse it for start and end values
+        if 'range' in data:
+            start, end = parse_range(data['range'])
+            data['byte_range_start'] = start
+            data['byte_range_end'] = end
+        else:
+            # If this is not a range request, set start and end values to empty string
+            if 'byte_range_start' not in data and 'byte_range_end' not in data:
+                data['byte_range_start'] = ''
+                data['byte_range_end'] = ''
+
         # We want to kill bad IPs here, otherwise we lose this ability
         # after we encode the ip.
         if 'ip' in data:
@@ -199,7 +232,7 @@ def clean(rows, mappings=None, salt=None):
             if 'encoded_ip' not in data:
                 data['encoded_ip'] = ip_encoder(data['ip'])
 
-        # make sure that we have everything we need.
+        # Verify that we have everything we need.
         data = verify(data, row)
 
         resp.append(data)
