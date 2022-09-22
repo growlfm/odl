@@ -6,7 +6,7 @@ services:
         build:
             context: .
         volumes:
-            - ./shared/data:/var/lib/odl/data
+            - ./shared/data:/var/lib/odl
 
     update:
         working_dir: /opt/odl
