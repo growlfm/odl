@@ -7,7 +7,7 @@ import fastavro
 
 from fastavro import writer, parse_schema
 
-from odl import blacklist
+from odl import denylist
 from odl.exceptions import ODLError
 from odl.prepare.encode import get_ip_encoder
 
@@ -225,7 +225,7 @@ def clean(rows, mappings=None, salt=None):
         # We want to kill bad IPs here, otherwise we lose this ability
         # after we encode the ip.
         if 'ip' in data:
-            if blacklist.is_blacklisted(data['ip']):
+            if denylist.is_denied(data['ip']):
                 print("IP on deny list! IP = {}, user agent = {}".format(str(data['ip']), data['user_agent']))
                 continue
 

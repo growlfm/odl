@@ -14,7 +14,7 @@ import apache_beam as beam
 import apache_beam.transforms.window as window
 import apache_beam.transforms.trigger as trigger
 
-from odl import blacklist, players
+from odl import denylist, players
 
 # User Agents that don't tell us about the app.
 useless_ua_re = re.compile('okhttp|AppleCoreMedia')
@@ -24,34 +24,34 @@ def to_unix_timestamp(timestamp):
     return calendar.timegm(udatetime.from_string(timestamp).utctimetuple())
 
 
-def remove_blacklisted_ip(item):
-    if not blacklist.is_blacklisted(item['ip']):
+def remove_denied_ip(item):
+    if not denylist.is_denied(item['ip']):
         yield item
 
 
-class RemoveByIPBlacklist(beam.PTransform):
+class RemoveByIPDenyList(beam.PTransform):
     """
-    Remove the downloads via the blacklist.
+    Remove the downloads via the IP denylist.
     """
 
     def expand(self, downloads):
         return (downloads
-                | 'RemoveIPByBlacklist' >> beam.FlatMap(remove_blacklisted_ip))
+                | 'RemoveByIPDenyList' >> beam.FlatMap(remove_denied_ip))
 
 
-def remove_blacklisted_ua(item):
+def remove_denied_ua(item):
     if not item['player']['bot']:
         yield item
 
 
-class RemoveByUABlacklist(beam.PTransform):
+class RemoveByUADenyList(beam.PTransform):
     """
     Using opawg's bot list, remove known bots.
     """
 
     def expand(self, downloads):
         return (downloads
-                | 'RemoveByUABlacklist' >> beam.FlatMap(remove_blacklisted_ua))
+                | 'RemoveByUADenyList' >> beam.FlatMap(remove_denied_ua))
 
 
 def add_player(item):
@@ -300,7 +300,7 @@ class ODLDownloads(beam.PTransform):
         good, bad = (
             events
             | 'AddPodcastPlayer' >> AddPodcastPlayer()
-            | 'RemoveByUABlacklist' >> RemoveByUABlacklist()
+            | 'RemoveByUADenyList' >> RemoveByUADenyList()
             | 'TimestampKey' >> beam.ParDo(timestamp_and_key)
             # window into 24 hour windows
             | 'Window' >> beam.WindowInto(

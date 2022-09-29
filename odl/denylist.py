@@ -15,7 +15,7 @@ def get_ranges():
                    ipaddress.ip_address(row['range_end']))
 
 
-class Blacklist(object):
+class DenyList(object):
     """
     Uses ipcat's excellent data center list to remove downloads from known
     datacenters.
@@ -24,7 +24,7 @@ class Blacklist(object):
     """
     _db = None
 
-    def is_blacklisted(self, ip):
+    def is_denied(self, ip):
         if self._db is None:
             self._db = pytricia.PyTricia()
             for start, end in get_ranges():
@@ -34,8 +34,8 @@ class Blacklist(object):
         return str(ip) in self._db
 
 
-blacklist = Blacklist()
+deny_list = DenyList()
 
 
-def is_blacklisted(ip):
-    return blacklist.is_blacklisted(ip)
+def is_denied(ip):
+    return deny_list.is_denied(ip)
