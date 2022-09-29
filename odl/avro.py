@@ -34,7 +34,7 @@ events_schema = {
     }, {
         'name': 'byte_range_end',
         'type': ["int", "null"]
-    }],
+    }]
 }
 
 events_parsed = parse_schema(events_schema)
@@ -65,7 +65,7 @@ downloads_schema = {
     }, {
         'name': 'app',
         'type': 'string'
-    }],
+    }]
 }
 
 downloads_parsed = parse_schema(downloads_schema)
