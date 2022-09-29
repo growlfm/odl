@@ -14,7 +14,7 @@ import apache_beam as beam
 import apache_beam.transforms.window as window
 import apache_beam.transforms.trigger as trigger
 
-from odl import denylist, players
+from odl import players
 
 # User Agents that don't tell us about the app.
 useless_ua_re = re.compile('okhttp|AppleCoreMedia')
@@ -22,21 +22,6 @@ useless_ua_re = re.compile('okhttp|AppleCoreMedia')
 
 def to_unix_timestamp(timestamp):
     return calendar.timegm(udatetime.from_string(timestamp).utctimetuple())
-
-
-def remove_denied_ip(item):
-    if not denylist.is_denied(item['ip']):
-        yield item
-
-
-class RemoveByIPDenyList(beam.PTransform):
-    """
-    Remove the downloads via the IP denylist.
-    """
-
-    def expand(self, downloads):
-        return (downloads
-                | 'RemoveByIPDenyList' >> beam.FlatMap(remove_denied_ip))
 
 
 def remove_denied_ua(item):
