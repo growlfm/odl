@@ -225,11 +225,14 @@ def to_odl_download(element):
     # put together an 'app'
     player = evt['player']
 
-    if player.get('app') != 'Unknown':
-        app = player.get('app')
-    else:
+    app = player.get('app')
+    device = player.get('device')
+    os = player.get('os')
+
+    if app == 'Unknown':
         # Use the rest of the data.
-        app = '{}.{}'.format(player.get('device'), player.get('os'))
+        print("Unknown app! user_agent = {}".format(player.get('user_agent')))
+        app = '{}.{}'.format(device, os)
 
     output = {
         'id': key,  # id of the download, for dedupe if needed.
