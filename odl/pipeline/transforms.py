@@ -6,8 +6,6 @@ be easily imported into other pipelines if needed.
 """
 import re
 import hashlib
-import calendar
-
 import udatetime
 
 import apache_beam as beam
@@ -21,7 +19,8 @@ useless_ua_re = re.compile('okhttp|AppleCoreMedia')
 
 
 def to_unix_timestamp(timestamp):
-    return calendar.timegm(udatetime.from_string(timestamp).utctimetuple())
+    # Convert ISO8601 string to Unix numeric timestamp (unit = seconds)
+    return int(udatetime.from_string(timestamp).timestamp())
 
 
 def remove_denied_ua(item):
@@ -179,7 +178,7 @@ def add_ip_user_agents(element):
         timestamp = to_unix_timestamp(evt['timestamp'])
 
         # It's 5 minutes, but in generally happens under 10 seconds.
-        lookback = to_unix_timestamp(evt['timestamp']) - 5 * 60
+        lookback = timestamp - 5 * 60
 
         evt['ip_user_agents'] = [
             ua for ua in user_agents if ua[0] != evt['user_agent']
