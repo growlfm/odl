@@ -29,7 +29,7 @@ def update():
         '/tmp/odl/data/user-agents.json')
 
     download(
-        'https://raw.githubusercontent.com/client9/ipcat/master/datacenters.csv',
+        'https://raw.githubusercontent.com/growlfm/ipcat/main/datacenters.csv',
         '/tmp/odl/data/datacenters.csv')
 
     print("Updated opawg user_agents and ipcat datacenters")
