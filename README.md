@@ -2,7 +2,7 @@
 
 Open Downloads (oDL) is built on the simple idea that podcast download numbers should be consistent and transparent across hosting companies, networks, and analytics providers.
 
-oDL is an open source package that contains a simple spec, blacklists, and code to prepare log files and count podcast downloads in a scalable way.
+oDL is an open source package that contains a simple spec, IP deny lists, and code to prepare log files and count podcast downloads in a scalable way.
 
 oDL's goal is to move the podcast industry forward collectively by introducing a layer of trust between podcasters, providers, and advertisers by removing the black box approach and replacing it with an open system to count and verify download numbers.
 
@@ -79,8 +79,8 @@ oDL is a fundamentally new paradigm in podcasting, so we wanted to explain a lit
 An oDL Download meets the following criteria:
 
 - It's an HTTP GET request
-- The IP Address is not on the blacklist
-- The User Agent is not on the blacklist
+- The IP Address is not on the deny list
+- The User Agent is not on the deny list AND not a bot
 - It can't be a streaming request for the first 2 bytes (i.e. Range: bytes=0-1)
 - The User Agent/IP combination counts once per day (i.e. fixed 24 hour period starting at midnight UTC)
 
@@ -88,12 +88,12 @@ That's it. It's intentionally simple to reduce confusion for all involved.
 
 ### Dealing with bots
 
-Podcasts get many downloads from bots, servers, and things that just aren't human. We need to avoid counting these, but if everyone maintains their own blacklist, they can't count the same way.
+Podcasts get many downloads from bots, servers, and things that just aren't human. We need to avoid counting these, but if everyone maintains their own user agent and IP allow/deny lists, they can't count the same way.
 
-oDL uses common, publicly available lists to decide which User Agents and IP Addresses should be blacklisted:
+oDL uses common, publicly available lists to decide which User Agents and IP Addresses should be disallowed:
 
 - OPAWG's Podcast User Agent list: https://github.com/opawg/user-agents
-- ipcat's datacenter IP list: https://github.com/client9/ipcat/blob/master/datacenters.csv
+- ipcat's datacenter IP list (updated fork): https://github.com/growlfm/ipcat/blob/main/datacenters.csv
 
 ### Out of Scope.
 
@@ -119,7 +119,7 @@ The IAB v2.0 spec is great, but it relies on wording around "Best Practices." We
 
 IAB v2.0 is also expensive. It's up to $45k for a hosting provider to become certified. Competition is important, and this hurdle creates an undue burden on smaller companies.
 
-oDL takes a transparent, open source approach. By using common blacklists of IPs and User Agents we make the industry as a whole more accurate.
+oDL takes a transparent, open source approach. By using common IP denylists and User Agents we make the industry as a whole more accurate.
 
 oDL and IAB v2.0 are not mutually exclusive. A provider may decide to do both.
 
@@ -127,7 +127,7 @@ oDL and IAB v2.0 are not mutually exclusive. A provider may decide to do both.
 
 Many hosting providers offer advanced analytics and we are all about it. oDL is not meant to reduce innovation in the podcast analytics space. Simplecast is [fingerprinting downloads](https://blog.simplecast.com/unique-listeners-a-brand-new-metric-for-the-podcasting-industry-from-simplecast/), [backtracks](https://backtracks.fm/podcast-analytics) has its thing going on and many others have interesting ideas of how to use download data.
 
-Advanced analytics methodologies are not consistent across hosting providers. Some providers will use a whitelist to allow more downloads from IPs with many users or use shorter attribution windows. These methods, while taken in good faith, inflate download numbers against providers that take a stricter approach.
+Advanced analytics methodologies are not consistent across hosting providers. Some providers will use an allow list to allow more downloads from IPs with many users or use shorter attribution windows. These methods, while taken in good faith, inflate download numbers against providers that take a stricter approach.
 
 Ad-supported podcasters can make more or less money depending on which hosting provider they choose.
 
