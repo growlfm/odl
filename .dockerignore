@@ -4,3 +4,7 @@
 Dockerfile
 docker-compose.yml
 setup.py
+
+# Python
+**/__pycache__/
+**/*.pyc
