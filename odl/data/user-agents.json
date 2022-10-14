@@ -169,6 +169,12 @@
 	"info_url": "https:\/\/podnews.net\/article\/applecoremedia-user-agent",
 	"developer_notes": "This is a library used by a number of apps when progressively downloading podcasts. It is not (just) Apple Podcasts, and should not be treated as an Apple Podcasts useragent"
 }, {
+	"user_agents": ["^Audacious"],
+	"examples": ["Audacious/3.10.1 neon/0.30.2"],
+	"device": "pc",
+	"description": "Audacious is an open source audio player.",
+	"info_url": "https:\/\/audacious-media-player.org\/"
+}, {
 	"user_agents": ["^atc\/.*"],
 	"app": "Apple Podcasts",
 	"device": "watch",
@@ -558,6 +564,12 @@
 	"device": "watch",
 	"examples": ["Garmin Forerunner 245 Music\/11.60"]
 }, {
+	"user_agents": ["^Garmin fenix 5X Plus"],
+	"app": "Garmin fenix 5X",
+	"developer_notes": "This uses Spotify to transfer audio to compatible watches",
+	"device": "watch",
+	"examples": ["Garmin fenix 5X Plus/18.0"]
+}, {
 	"user_agents": ["^Go-http-client"],
 	"developer_notes": "This has been seen being used by a TuneIn client, and may be within WinAMP code.",
 	"examples": ["Go-http-client\/2.0"]
@@ -595,6 +607,12 @@
 	"description": "The social podcasting app",
 	"info_url": "https:\/\/www.goodpods.com\/",
 	"svg": "goodpods.svg"
+}, {
+	"user_agents": ["^Gumball"],
+	"examples": ["Gumball.fm Analytics Prefix Checker"],
+	"app": "Gumball",
+	"bot": true,
+	"description": "An attribution service (known as Gumshoe) from the Gumball network"
 }, {
 	"user_agents": ["Googlebot\/", "Googlebot-Video\/", "Googlebot-Image\/"],
 	"examples": ["Mozilla\/5.0 (Linux; Android 6.0.1; Nexus 5X Build\/MMB29P) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/86.0.4240.96 Mobile Safari\/537.36 (compatible; Googlebot\/2.1; http:\/\/www.google.com\/bot.html)", "Googlebot-Image\/1.0"],
@@ -947,6 +965,11 @@
 	"os": "android",
 	"examples": ["NPROneAndroid"]
 }, {
+	"user_agents": ["NRC Audio\/.*Android"],
+	"examples": ["NRC Audio/2.0.0 (nl.nrc.audio; build:29; Android 12; Sdk:31; Manufacturer:samsung; Model: SM-G975F) OkHttp/4.9.3"],
+	"description": "NRC Audio",
+	"os": "android"
+}, {
 	"user_agents": ["^OkDownload\/"]
 }, {
 	"user_agents": ["okhttp"],
@@ -1089,6 +1112,14 @@
 	"info_url": "https:\/\/podfollow.com",
 	"description": "Podfollow, a service to help link to your podcast",
 	"bot": true
+}, {
+  	"user_agents": ["PodderBot\/"],
+  	"examples": ["PodderBot\/1.0"],
+  	"app": "PodderBot",
+  	"bot": true,
+  	"description": "PodderApp bot",
+  	"info_url": "https:\/\/www.podderapp.com\/",
+  	"developer_notes": "PodderApp bot for RSS fetching / verification"
 }, {
 	"user_agents": ["^Podfriend"],
 	"app": "Podfriend",
@@ -1567,23 +1598,23 @@
 	"user_agents": ["^SoundOn\/[d.]+s+bot"],
 	"bot": true
 }, {
-	"user_agents": ["^Podverse\/.*Android Mobile App\/"],
+	"user_agents": ["^Podverse\/.*Android Mobile App"],
 	"app": "Podverse",
 	"device": "phone",
 	"os": "android",
 	"info_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.podverse&hl=en_US",
 	"description": "Open source podcast catcher for Android, with clip-sharing, playlists, device syncing and more.",
-	"examples": ["Podverse/F-Droid Android Mobile App/","Podverse/Android Mobile App/Mozilla/5.0 (Linux; Android 12; SM-S134DL Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/105.0.5195.136 Mobile Safari/537.36"],
-	"developer_notes": "The standard device user agent is concatenated to the end of the Podverse\/Android Mobile App\/ user agent."
+	"examples": ["Podverse/Android Mobile App","Podverse/F-Droid Android Mobile App/","Podverse/Android Mobile App/Mozilla/5.0 (Linux; Android 12; SM-S134DL Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/105.0.5195.136 Mobile Safari/537.36"],
+	"developer_notes": "The standard device user agent was formerly concatenated to the end of the Podverse\/Android Mobile App\/ user agent."
 }, {
-	"user_agents": ["^Podverse\/iOS Mobile App\/"],
+	"user_agents": ["^Podverse\/iOS Mobile App"],
 	"app": "Podverse",
 	"device": "phone",
 	"os": "ios",
-	"examples": ["Podverse\/iOS Mobile App\/Mozilla\/5.0 (iPhone; CPU iPhone OS 13_6_1 like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Mobile\/1234"],
+	"examples": ["Podverse/iOS Mobile App","Podverse\/iOS Mobile App\/Mozilla\/5.0 (iPhone; CPU iPhone OS 13_6_1 like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Mobile\/1234"],
 	"description": "Open source podcast catcher for iOS, with clip-sharing, playlists, device syncing and more.",
 	"info_url": "https:\/\/apps.apple.com\/us\/app\/podverse\/id1390888454",
-	"developer_notes": "The standard device user agent is concatenated to the end of the Podverse\/iOS Mobile App\/ user agent."
+	"developer_notes": "The standard device user agent was formerly concatenated to the end of the Podverse\/iOS Mobile App\/ user agent."
 }, {
 	"user_agents": ["^Podverse\/Feed Parser"],
 	"bot": true,
@@ -1837,6 +1868,54 @@
 	"description": "Vestnytt iOS app",
 	"os": "ios"
 }, {
+	"user_agents": ["Android VG Hermes\/"],
+	"examples": ["Android VG Hermes/1000094692 app vg_app_ VG/Snarvei/1000094692 VG-App"],
+	"app": "VG Android app",
+	"description": "VG Android app",
+	"os": "android"
+}, {
+	"user_agents": ["Android Aftonbladet Hermes\/"],
+	"examples": ["Android Aftonbladet Hermes/1000094692 _app_"],
+	"app": "Aftonbladet Android app",
+	"description": "Aftonbladet Android app",
+	"os": "android"
+},{
+	"user_agents": ["Android Sportbladet Hermes\/"],
+	"examples": ["Android Sportbladet Hermes/1000094692 _app_"],
+	"app": "Sportbladet Android app",
+	"description": "Sportbladet Android app",
+	"os": "android"
+}, {
+	"user_agents": ["Android AP Hermes\/"],
+	"examples": ["Android AP Hermes/1000094692 _app_"],
+	"app": "Aftenposten Android app",
+	"description": "Aftenposten Android app",
+	"os": "android"
+}, {
+	"user_agents": ["Android BT Hermes\/"],
+	"examples": ["Android BT Hermes/1000094692 _app_"],
+	"app": "Bergens Tidende Android app",
+	"description": "Bergens Tidende Android app",
+	"os": "android"
+}, {
+	"user_agents": ["Android SA Hermes\/"],
+	"examples": ["Android SA Hermes/1000094692 _app_"],
+	"app": "Stavanger Aftenblad Android app",
+	"description": "Stavanger Aftenblad Android app",
+	"os": "android"
+}, {
+	"user_agents": ["SvD Hermes\/"],
+	"examples": ["SvD Hermes/999999999 _app_"],
+	"app": "Svenska Dagbladet Android app",
+	"description": "Svenska Dagbladet Android app",
+	"os": "android"
+}, {
+	"user_agents": ["Android E24 Hermes\/"],
+	"examples": ["Android E24 Hermes/1000094692 _app_"],
+	"app": "E24 Android app",
+	"description": "E24 Android app",
+	"os": "android"
+}, {
 	"user_agents": ["^Riddler "],
 	"examples": ["Riddler (http:\/\/riddler.io\/about)"],
 	"app": "F-Secure Riddler",
@@ -1917,7 +1996,7 @@
 	"bot": true,
 	"developer_notes": "This useragent is used during a user importing a podcast to the Anchor platform"
 }, {
-	"user_agents": ["Podio\/"],
+	"user_agents": ["^Podio\/"],
 	"examples": ["Podio\/1.0"],
 	"description": "Podcasts + Radio = Podio",
 	"info_url": "https:\/\/podio.radio\/",
@@ -1929,4 +2008,9 @@
 	"examples": ["Playapod/2.4.11"],
 	"description": "Best Cross-Platform Podcast and News App",
 	"info_url": "https:\/\/playapod.com\/"
+}, {
+	"user_agents": ["Zune\/"],
+	"examples": ["Zune\/4.8"],
+	"description": "Microsoft Zune",
+	"bot": false
 }]
