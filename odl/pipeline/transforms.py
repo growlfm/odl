@@ -282,7 +282,7 @@ class ODLDownloads(beam.PTransform):
 
     def expand(self, events):
         window_trigger = trigger.DefaultTrigger()
-        offest = self.window_offset and self.window_offset or 0
+        offset = self.window_offset and self.window_offset or 0
 
         good, bad = (
             events
@@ -291,7 +291,7 @@ class ODLDownloads(beam.PTransform):
             | 'TimestampKey' >> beam.ParDo(timestamp_and_key)
             # window into 24 hour windows
             | 'Window' >> beam.WindowInto(
-                window.FixedWindows(60 * 60 * 24, offset=offest),
+                window.FixedWindows(60 * 60 * 24, offset=offset),
                 trigger=window_trigger,
                 accumulation_mode=trigger.AccumulationMode.ACCUMULATING)
 
