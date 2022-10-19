@@ -1,0 +1,52 @@
+name: Update user agent database and IP list
+
+on:
+    workflow_dispatch: {}
+    push:
+        branches:
+            - main
+    schedule:
+        - cron: "15 3 * * *"
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: Configure git
+              uses: oleksiyrudenko/gha-git-credentials@v2.1
+              with:
+                  token: ${{ secrets.DEVOPS_GITHUB_TOKEN }}
+            - name: Create .env file
+              run: |
+                  touch .env
+            - name: Build
+              run: |
+                  docker compose build
+            - name: Update
+              run: |
+                  docker compose run update
+            - name: Copy artifacts
+              run: |
+                  cp ${{ github.workspace }}/tmp/odl/* ${{ github.workspace }}/odl/data
+            - name: Rebuild with updated artifacts
+              run: |
+                  docker compose build
+            - name: Run unit tests
+              run: |
+                  docker compose run unit-test
+            - name: Commit changes to user agent database
+              uses: EndBug/add-and-commit@v9
+              with:
+                  add: ./odl/data/user-agents.json
+                  author_name: Growl Dev-Ops
+                  author_email: dev-ops@growl.fm
+                  message: Update user agent database
+            - name: Commit changes to IP list
+              uses: EndBug/add-and-commit@v9
+              with:
+                  add: ./odl/data/datacenters.csv
+                  author_name: Growl Dev-Ops
+                  author_email: dev-ops@growl.fm
+                  message: Update IP list
