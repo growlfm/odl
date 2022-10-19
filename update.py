@@ -1,5 +1,5 @@
 """
-Utility to grab the raw data for user_agents and blacklist.
+Utility to grab the raw data for user_agents and datacenter IP list.
 """
 
 import os
@@ -21,16 +21,16 @@ def update():
     print("Downloading opawg user_agents and ipcat datacenters")
 
     # Ensure output dir exists
-    output_path = '/tmp/odl/data/'
+    output_path = '/tmp/odl/'
     Path(output_path).mkdir(parents=True, exist_ok=True)
 
     download(
         'https://raw.githubusercontent.com/opawg/user-agents/master/src/user-agents.json',
-        '/tmp/odl/data/user-agents.json')
+        '/tmp/odl/user-agents.json')
 
     download(
         'https://raw.githubusercontent.com/growlfm/ipcat/main/datacenters.csv',
-        '/tmp/odl/data/datacenters.csv')
+        '/tmp/odl/datacenters.csv')
 
     print("Updated opawg user_agents and ipcat datacenters")
 
