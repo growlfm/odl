@@ -10,7 +10,7 @@ oDL's goal is to move the podcast industry forward collectively by introducing a
 
 ### Docker (_preferred_)
 
-Note: Using `docker-compose`, a Docker volume is used to share files between host and container. Host path, `./shared/data` is mapped to the container path, `/var/lib/odl`.
+Note: Using `docker-compose`, a Docker volume is used to share files between host and container. The host path, `./shared/data` is mapped to the container path, `/var/lib/odl`.
 
 1. Place source events CSV file in `./shared/data/` directory.
 

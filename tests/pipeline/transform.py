@@ -13,7 +13,7 @@ DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
 
 def print_item(i):
-    print i
+    print(i)
     return i
 
 
@@ -36,19 +36,22 @@ class TestODLWindow(unittest.TestCase):
                         os.path.join(DIR_PATH,
                                      '../../fixtures/demo.odl.avro')))))
 
-            downloads = (events | transforms.ODLDownloads(3600))
+            # Use 1 hour offset (in seconds) from UTC for the attribution window
+            offset = 60 * 60
+            downloads = (events | transforms.ODLDownloads(window_offset=offset))
 
-            p_r = (downloads | beam.Map(print_item))
+            # Get hourly Downloads.
+            hourly = (downloads | 'CountByHour' >> transforms.CountByHour())
 
-            c_h = (downloads | transforms.CountByHour()
-                   | 'hour' >> beam.Map(print_item))
-            c_a = (downloads | transforms.CountByApp()
-                   | 'a' >> beam.Map(print_item))
-            c_e = (downloads | transforms.CountByEpisode()
-                   | 'e' >> beam.Map(print_item))
+            # Downloads by Episode
+            episodes = (downloads | 'CountByEpisode' >> transforms.CountByEpisode())
 
-            d_g = (downloads | transforms.CountDownloads()
-                   | 'c' >> beam.Map(print_item))
+            # Downloads by App.
+            apps = (downloads | 'CountByApp' >> transforms.CountByApp())
+
+            # Total number of downloads.
+            count = (downloads | 'CountDownloads' >> transforms.CountDownloads()
+                            | 'Num Downloads' >> beam.Map(print_item))
 
 
 if __name__ == '__main__':

@@ -1,5 +1,4 @@
 import os
-import csv
 import json
 import unittest
 
@@ -8,18 +7,18 @@ from odl import players
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
 
+def get_useragents():
+    with open(os.path.join(DIR_PATH, '../odl/data/user-agents.json'),
+              'rb') as jsonfile:
+        return json.load(jsonfile)
+
+
 class TestPlayers(unittest.TestCase):
     def test_basic_players(self):
 
-        with open(os.path.join(DIR_PATH, '../fixtures/user_agents.csv'),
-                  'rb') as csvfile:
-            reader = csv.reader(csvfile)
-            for row in reader:
-                ua, percent = row
-                player = players.get_player(ua)
-
-                if not player['bot'] and player["app"] == "Unknown" and player["os"] == "Unknown":
-                    print ua
+        for row in get_useragents():
+            assert "user_agents" in row
+            assert len(row['user_agents']) > 0
 
 
 if __name__ == '__main__':

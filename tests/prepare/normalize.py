@@ -20,7 +20,7 @@ DATA = """
   "latitude": 41.746975,
   "startedAt": "2019-07-22T22:59:59.987816349Z",
   "enclosureUrl": "https://podsights.com/example.mp3",
-  "ipAddress": "1.200.300.4000",
+  "ipAddress": "1.200.200.200",
   "method": "GET"
 },
 {
@@ -49,10 +49,12 @@ class TestNormalize(unittest.TestCase):
         resp = prepare.clean(data, mappings={"startedAt": "timestamp"})
 
         assert resp[0]["http_method"] == "GET"
-        assert "ip" not in resp[0]
+        assert "encoded_ip" in resp[0]
+        assert "byte_range_start" in resp[0]
+        assert "byte_range_end" in resp[0]
 
         assert resp[1]["http_method"] == "GET"
-        assert "ip" not in resp[1]
+        assert "encoded_ip" in resp[1]
 
 
 if __name__ == '__main__':
