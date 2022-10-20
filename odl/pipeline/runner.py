@@ -1,4 +1,5 @@
 import os
+import glob
 import apache_beam as beam
 
 from apache_beam.options.pipeline_options import PipelineOptions
@@ -61,6 +62,9 @@ def run(path, output_path, options=None, offset=None):
     # All values
     values = (downloads | 'AllValues' >> transforms.ExtractDownloads())
 
+    # All values by hour
+    values_by_hour = (downloads | 'AllValuesByHour' >> transforms.ExtractDownloadsByHour())
+
     # Write everything out.
 
     # Write hourly (CSV)
@@ -81,9 +85,20 @@ def run(path, output_path, options=None, offset=None):
     # Write downloads (CSV)
     downloads_out = (values | 'WriteDownloads' >> outputs.WriteCSV(output_path, 'downloads'))
 
+    # Write downloads by hour (CSV)
+    for i, hour in values_by_hour:
+        downloads_by_hour_out = (hour
+            | 'WriteDownloads{}'.format(i) >> outputs.WriteCSV(output_path, 'downloads-{:02d}'.format(i)))
+
     # Actually start this thing and wait till it's done.
     resp = pipeline.run()
     resp.wait_until_finish()
+
+    # Delete any empty hourly files
+    files = glob.glob('{}/downloads-??.csv'.format(output_path))
+    for filename in files:
+        if os.path.getsize(filename) == 0:
+            os.remove(filename)
 
     if output_path.startswith('/'):
 
@@ -91,7 +106,4 @@ def run(path, output_path, options=None, offset=None):
             print("\noDL run complete.\nDownloads: {}".format(
                 file.read().strip()))
 
-        for file_name in [
-            'count.txt', 'downloads.csv', 'hourly.csv', 'episodes.csv', 'apps.csv'
-        ]:
-            print("\n{}".format(os.path.join(output_path, file_name)))
+        print("Output files written to path: {}".format(output_path))

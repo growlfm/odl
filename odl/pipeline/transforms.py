@@ -125,7 +125,7 @@ class CountByAttribute(beam.PTransform):
 
         return (downloads | 'Get{}'.format(self.attribute.capitalize()) >>
                 beam.Map(lambda dl: dl[self.attribute])
-                | 'CountpBy{}'.format(self.attribute.capitalize()) >>
+                | 'CountBy{}'.format(self.attribute.capitalize()) >>
                 beam.combiners.Count.PerElement())
 
 
@@ -164,6 +164,19 @@ class CountDownloads(beam.PTransform):
 class ExtractDownloads(beam.PTransform):
     def expand(self, downloads):
         return (downloads | 'ExtractDownloads' >> beam.Map(get_odl_download_values))
+
+
+def partition_fn(dl, num_partitions):
+    return int(udatetime.from_string(dl['timestamp']).hour)
+
+
+class ExtractDownloadsByHour(beam.PTransform):
+    def expand(self, downloads):
+        hours = []
+        downloads_by_hour = downloads | 'PartitionByHour' >> beam.Partition(partition_fn, 24)
+        for i, hour in enumerate(downloads_by_hour):
+            hours.append((i, hour | 'ExtractHour{}Downloads'.format(i) >> beam.Map(get_odl_download_values)))
+        return hours
 
 
 def add_ip_user_agents(element):

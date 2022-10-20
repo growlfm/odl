@@ -45,5 +45,5 @@ class Write(beam.PTransform):
     def expand(self, items):
         path = os.path.join(self.file_path, self.name)
         return (items
-                | 'WriteCSV' >> beam.io.WriteToText(
+                | 'WriteText' >> beam.io.WriteToText(
                     path, file_name_suffix='.txt', shard_name_template=''))

@@ -29,20 +29,11 @@ $ cp events.csv ./shared/data
 $ docker-compose run odl python run.py /var/lib/odl/events.csv
 
 Creating odl_odl_run ... done
-Running the oDL pipeline from /tmp/odl/246af18d740d4f12b7b3b25b09548c8f.avro to /var/lib/odl/246af18d740d4f12b7b3b25b09548c8f
+Running the oDL pipeline from /tmp/odl/ec2e4eef293f414a936ce8e7821f8d0c.avro to /var/lib/odl/ec2e4eef293f414a936ce8e7821f8d0c
 
 oDL run complete.
 Downloads: 270
-
-/var/lib/odl/58a1c9b76bd44f0486997f22c398b4e4/count.txt
-
-/var/lib/odl/58a1c9b76bd44f0486997f22c398b4e4/downloads.csv
-
-/var/lib/odl/58a1c9b76bd44f0486997f22c398b4e4/hourly.csv
-
-/var/lib/odl/58a1c9b76bd44f0486997f22c398b4e4/episodes.csv
-
-/var/lib/odl/58a1c9b76bd44f0486997f22c398b4e4/apps.csv
+Output files written to path: /var/lib/odl/ec2e4eef293f414a936ce8e7821f8d0c
 ```
 
 
@@ -64,14 +55,8 @@ $ ipython
 Running the oDL pipeline from path/to/events.odl.avro to path/to/events-output
 
 oDL run complete.
-
 Downloads: 13751
-
-path/to/events-output/count.txt
-path/to/events-output/downloads.csv
-path/to/events-output/hourly.csv
-path/to/events-output/episodes.csv
-path/to/events-output/apps.csv
+Output files written to path: path/to/events-output
 ```
 
 ## Overview
