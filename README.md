@@ -32,16 +32,19 @@ Creating odl_odl_run ... done
 Running the oDL pipeline from /tmp/odl/246af18d740d4f12b7b3b25b09548c8f.avro to /var/lib/odl/246af18d740d4f12b7b3b25b09548c8f
 
 oDL run complete.
-Downloads: 282
+Downloads: 270
 
-/var/lib/odl/246af18d740d4f12b7b3b25b09548c8f/count.txt
+/var/lib/odl/58a1c9b76bd44f0486997f22c398b4e4/count.txt
 
-/var/lib/odl/246af18d740d4f12b7b3b25b09548c8f/hourly.csv
+/var/lib/odl/58a1c9b76bd44f0486997f22c398b4e4/downloads.csv
 
-/var/lib/odl/246af18d740d4f12b7b3b25b09548c8f/episodes.csv
+/var/lib/odl/58a1c9b76bd44f0486997f22c398b4e4/hourly.csv
 
-/var/lib/odl/246af18d740d4f12b7b3b25b09548c8f/apps.csv
+/var/lib/odl/58a1c9b76bd44f0486997f22c398b4e4/episodes.csv
+
+/var/lib/odl/58a1c9b76bd44f0486997f22c398b4e4/apps.csv
 ```
+
 
 ### iPython
 
@@ -65,6 +68,7 @@ oDL run complete.
 Downloads: 13751
 
 path/to/events-output/count.txt
+path/to/events-output/downloads.csv
 path/to/events-output/hourly.csv
 path/to/events-output/episodes.csv
 path/to/events-output/apps.csv

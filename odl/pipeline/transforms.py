@@ -17,6 +17,8 @@ from odl import players
 # User Agents that don't tell us about the app.
 useless_ua_re = re.compile('okhttp|AppleCoreMedia')
 
+MILLIS_PER_SEC = 1000
+
 
 def to_unix_timestamp(timestamp):
     # Convert ISO8601 string to Unix numeric timestamp (unit = seconds)
@@ -159,6 +161,11 @@ class CountDownloads(beam.PTransform):
                 beam.combiners.CountCombineFn()).without_defaults())
 
 
+class ExtractDownloads(beam.PTransform):
+    def expand(self, downloads):
+        return (downloads | 'ExtractDownloads' >> beam.Map(get_odl_download_values))
+
+
 def add_ip_user_agents(element):
     """
     Add the alternative user_agents. "AppleCoreMedia" can be any number of
@@ -207,6 +214,36 @@ class ODLGroupUserAgents(beam.PTransform):
                 | 'AddIpUserAgents' >> beam.FlatMap(add_ip_user_agents))
 
 
+def get_odl_download_values(element):
+
+    key = '^'.join([element['encoded_ip'], element['user_agent']])
+    listener_id = hashlib.md5(key.encode('utf-8')).hexdigest()
+
+    # Want Unix timestamp to be in milliseconds, not seconds
+    ts_in_ms = element['unix'] * MILLIS_PER_SEC
+
+    if 'ip' in element:
+        output = {
+            'timestamp': ts_in_ms,
+            'ip': element['ip'],
+            'user_agent': element['user_agent'],
+            'listener_id': listener_id,
+            'episode_id': element['episode_id'],
+            'app': element['app']
+        }
+    else:
+        output = {
+            'timestamp': ts_in_ms,
+            'encoded_ip': element['encoded_ip'],
+            'user_agent': element['user_agent'],
+            'listener_id': listener_id,
+            'episode_id': element['episode_id'],
+            'app': element['app']
+        }
+
+    return list(output.values())
+
+
 def to_odl_download(element):
     """
     Sort out the final output
@@ -235,14 +272,15 @@ def to_odl_download(element):
 
     output = {
         'id': key,  # id of the download, for dedupe if needed.
-        'encoded_ip': evt['encoded_ip'],
         'timestamp': evt['timestamp'],
+        'unix': evt['unix'],
+        'encoded_ip': evt['encoded_ip'],
         'user_agent': evt['user_agent'],
         'episode_id': evt['episode_id'],
         'app': app
     }
 
-    if 'ip' in evt:
+    if evt['ip']:
         output['ip'] = evt['ip']
 
     return output

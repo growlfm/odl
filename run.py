@@ -16,7 +16,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
-        "input_file", help="File path to raw source events (in CSV format)")
+        "input_file", help="File path to raw source events (in either CSV or JSON format)")
 
     args = parser.parse_args()
 

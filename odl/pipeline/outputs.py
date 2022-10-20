@@ -1,12 +1,8 @@
 import csv
 import os
-import json
 from io import StringIO
 
 import apache_beam as beam
-import apache_beam.transforms.window as window
-
-from odl.avro import downloads_parsed
 
 
 def to_csv(item):
@@ -51,22 +47,3 @@ class Write(beam.PTransform):
         return (items
                 | 'WriteCSV' >> beam.io.WriteToText(
                     path, file_name_suffix='.txt', shard_name_template=''))
-
-
-class WriteDownloads(beam.PTransform):
-    def __init__(self, file_path, label=None):
-        super(WriteDownloads, self).__init__(label=label)
-        self.file_path = file_path
-
-    def expand(self, downloads):
-        path = os.path.join(self.file_path, 'downloads')
-
-        return (
-            downloads
-            |
-            'DownloadsGlobalWindow' >> beam.WindowInto(window.GlobalWindows())
-            | beam.io.avroio.WriteToAvro(
-                path,
-                downloads_parsed,
-                use_fastavro=True,
-                file_name_suffix='.avro'))

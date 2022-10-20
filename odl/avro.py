@@ -39,37 +39,6 @@ events_schema = {
 
 events_parsed = parse_schema(events_schema)
 
-downloads_schema = {
-    'doc':'oDL Download Schema',
-    'name': 'oDL Downloads',
-    'namespace': 'odl',
-    'type': 'record',
-    'fields': [{
-        'name': 'id',
-        'type': 'string'
-    }, {
-        'name': 'ip',
-        'type': ['string', 'null']
-    }, {
-        'name': 'encoded_ip',
-        'type': 'string'
-    }, {
-        'name': 'user_agent',
-        'type': 'string'
-    }, {
-        'name': 'timestamp',
-        'type': 'string'
-    }, {
-        'name': 'episode_id',
-        'type': 'string'
-    }, {
-        'name': 'app',
-        'type': 'string'
-    }]
-}
-
-downloads_parsed = parse_schema(downloads_schema)
-
 
 def write_events(rows, file_path):
     """

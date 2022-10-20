@@ -1,5 +1,4 @@
 import os
-import shutil
 import apache_beam as beam
 
 from apache_beam.options.pipeline_options import PipelineOptions
@@ -59,24 +58,28 @@ def run(path, output_path, options=None, offset=None):
     # Total number of downloads.
     count = (downloads | 'CountDownloads' >> transforms.CountDownloads())
 
-    # Write everything out. We are going to use CSV formats for hourly,
-    # episodes, etc and avro for the downloads again.
+    # All values
+    values = (downloads | 'AllValues' >> transforms.ExtractDownloads())
+
+    # Write everything out.
+
+    # Write hourly (CSV)
     hourly_out = (hourly
                   | 'WriteHourly' >> outputs.WriteCSV(output_path, 'hourly'))
 
-    # Write episodes
+    # Write episodes (CSV)
     episodes_out = (
         episodes
         | 'WriteEpisodes' >> outputs.WriteCSV(output_path, 'episodes'))
 
-    # Write apps
+    # Write apps (CSV)
     apps_out = (apps | 'WriteApps' >> outputs.WriteCSV(output_path, 'apps'))
 
-    # Write count
+    # Write count (TXT)
     count_out = (count | 'WriteCount' >> outputs.Write(output_path, 'count'))
 
-    downloads_out = (downloads
-                     | 'WriteDownloads' >> outputs.WriteDownloads(output_path))
+    # Write downloads (CSV)
+    downloads_out = (values | 'WriteDownloads' >> outputs.WriteCSV(output_path, 'downloads'))
 
     # Actually start this thing and wait till it's done.
     resp = pipeline.run()
@@ -89,6 +92,6 @@ def run(path, output_path, options=None, offset=None):
                 file.read().strip()))
 
         for file_name in [
-            'count.txt', 'hourly.csv', 'episodes.csv', 'apps.csv'
+            'count.txt', 'downloads.csv', 'hourly.csv', 'episodes.csv', 'apps.csv'
         ]:
             print("\n{}".format(os.path.join(output_path, file_name)))
