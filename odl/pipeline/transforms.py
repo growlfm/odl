@@ -229,7 +229,9 @@ def get_odl_download_values(element):
             'user_agent': element['user_agent'],
             'listener_id': listener_id,
             'episode_id': element['episode_id'],
-            'app': element['app']
+            'app': element['app'],
+            'device': element['device'],
+            'os': element['os']
         }
     else:
         output = {
@@ -238,7 +240,9 @@ def get_odl_download_values(element):
             'user_agent': element['user_agent'],
             'listener_id': listener_id,
             'episode_id': element['episode_id'],
-            'app': element['app']
+            'app': element['app'],
+            'device': element['device'],
+            'os': element['os']
         }
 
     return list(output.values())
@@ -277,7 +281,9 @@ def to_odl_download(element):
         'encoded_ip': evt['encoded_ip'],
         'user_agent': evt['user_agent'],
         'episode_id': evt['episode_id'],
-        'app': app
+        'app': app,
+        'device': device,
+        'os': os
     }
 
     if evt['ip']:
