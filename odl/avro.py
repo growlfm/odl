@@ -20,6 +20,9 @@ events_schema = {
         'name': 'user_agent',
         'type': 'string'
     }, {
+        'name': 'referer',
+        'type': 'string'
+    }, {
         'name': 'http_method',
         'type': 'string'
     }, {

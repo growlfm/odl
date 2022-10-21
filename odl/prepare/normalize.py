@@ -71,6 +71,11 @@ fields = {
         "default": "",
         "clean": clean_string
     },
+    "referer": {
+        "required": True,
+        "default": "",
+        "clean": clean_string
+    },
     "http_method": {
         "required": True,
         "clean": clean_string
@@ -110,6 +115,7 @@ default_mappings = {
     'ipaddress': 'ip',
     'ip_address': 'ip',
     'useragent': 'user_agent',
+    'referrer': 'referer',
     'encodedip': 'encoded_ip',
     'hashed_ip_address': 'encoded_ip',
     'enclosureurl': 'episode_id',
@@ -117,6 +123,7 @@ default_mappings = {
     'url': 'episode_id',
     'method': 'http_method'
 }
+
 
 def to_mapping(mappings):
     """

@@ -235,30 +235,20 @@ def get_odl_download_values(element):
     # Want Unix timestamp to be in milliseconds, not seconds
     ts_in_ms = element['unix'] * MILLIS_PER_SEC
 
-    if 'ip' in element:
-        output = {
-            'timestamp': ts_in_ms,
-            'ip': element['ip'],
-            'user_agent': element['user_agent'],
-            'listener_id': listener_id,
-            'episode_id': element['episode_id'],
-            'app': element['app'],
-            'device': element['device'],
-            'os': element['os']
-        }
-    else:
-        output = {
-            'timestamp': ts_in_ms,
-            'encoded_ip': element['encoded_ip'],
-            'user_agent': element['user_agent'],
-            'listener_id': listener_id,
-            'episode_id': element['episode_id'],
-            'app': element['app'],
-            'device': element['device'],
-            'os': element['os']
-        }
+    # Build list with item values in proper order for output CSV schema
+    # ['timestamp', 'ip/encoded_ip', 'user_agent', 'referer', 'listener_id', 'episode_id', 'app', 'device', 'os']
+    row = []
+    row.append(ts_in_ms)
+    row.append(element['ip'] if 'ip' in element else element['encoded_ip'])
+    row.append(element['user_agent'])
+    row.append(element['referer'])
+    row.append(listener_id)
+    row.append(element['episode_id'])
+    row.append(element['app'])
+    row.append(element['device'])
+    row.append(element['os'])
 
-    return list(output.values())
+    return row
 
 
 def to_odl_download(element):
@@ -293,6 +283,7 @@ def to_odl_download(element):
         'unix': evt['unix'],
         'encoded_ip': evt['encoded_ip'],
         'user_agent': evt['user_agent'],
+        'referer': evt['referer'],
         'episode_id': evt['episode_id'],
         'app': app,
         'device': device,
