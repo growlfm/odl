@@ -1311,7 +1311,7 @@
 71.18.0.0,71.18.255.255,TIKTOK PTE. LTD,https://www.bytedance.com/
 71.131.192.0,71.132.63.255,Amazon AWS,http://www.amazon.com/aws/
 71.136.64.0,71.136.127.255,Amazon AWS,http://www.amazon.com/aws/
-71.137.4.0,71.137.4.255,Amazon AWS,http://www.amazon.com/aws/
+71.137.0.0,71.137.63.255,Amazon AWS,http://www.amazon.com/aws/
 72.1.96.0,72.1.127.255,latisys,http://www.latisys.com/
 72.1.240.0,72.1.255.255,ndchost.com,http://www.ndchost.com/
 72.3.128.0,72.3.255.255,Rackspace,http://www.rackspace.com/
@@ -1427,6 +1427,7 @@
 76.74.128.0,76.74.255.255,PEER 1,http://www.peer1.com/
 76.75.192.0,76.75.223.255,Pair Networks,http://www.pair.com/
 76.164.192.0,76.164.239.255,VersaWeb,http://www.versaweb.com/
+76.223.128.0,76.223.128.255,Amazon AWS,http://www.amazon.com/aws/
 77.37.0.0,77.37.127.255,Star-Hosting e.K.,http://star-hosting.de/
 77.66.0.0,77.66.127.255,Netgroup Denmark,https://www.netgroup.dk/
 77.68.0.0,77.68.127.255,Fasthosts Internet Ltd,http://www.fasthosts.co.uk/
