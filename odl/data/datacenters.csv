@@ -598,6 +598,7 @@
 40.126.128.0,40.127.32.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 40.127.64.0,40.127.111.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 40.127.128.0,40.127.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+40.176.0.0,40.177.255.255,Amazon AWS,http://www.amazon.com/aws/
 42.1.60.0,42.1.63.255,Exa Bytes Network Sdn Bhd,http://exabytes.com/
 43.192.0.0,43.192.255.255,Amazon AWS,http://www.amazon.com/aws/
 43.196.0.0,43.196.255.255,Amazon AWS,http://www.amazon.com/aws/
@@ -1952,6 +1953,7 @@
 99.79.0.0,99.81.255.255,Amazon AWS,http://www.amazon.com/aws/
 99.150.0.0,99.150.127.255,Amazon AWS,http://www.amazon.com/aws/
 99.151.64.0,99.151.159.255,Amazon AWS,http://www.amazon.com/aws/
+99.151.168.0,99.151.175.255,Amazon AWS,http://www.amazon.com/aws/
 99.192.128.0,99.192.255.255,MojoHost,http://www.mojohost.com
 99.198.96.0,99.198.127.255,SingleHop,http://www.singlehop.com/
 100.20.0.0,100.31.255.255,Amazon AWS,http://www.amazon.com/aws/
