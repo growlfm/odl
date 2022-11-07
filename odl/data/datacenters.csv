@@ -341,6 +341,7 @@
 31.220.104.0,31.220.104.255,Hostinger,https://www.hostinger.com/
 31.220.128.0,31.220.131.255,everhost,http://everhost.co/
 31.222.128.0,31.222.191.255,Rackspace,http://www.rackspace.com/
+34.0.32.0,34.0.47.255,Google Cloud,https://cloud.google.com/
 34.0.64.0,34.0.95.255,Google Cloud,https://cloud.google.com/
 34.16.0.0,34.16.255.255,Google Cloud,https://cloud.google.com/
 34.19.0.0,34.22.63.255,Google Cloud,https://cloud.google.com/
