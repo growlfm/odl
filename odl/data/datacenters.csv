@@ -198,7 +198,7 @@
 20.60.138.0,20.95.30.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.95.33.0,20.95.33.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.95.40.0,20.95.53.255,Microsoft Azure,http://www.windowsazure.com/en-us/
-20.95.64.0,20.95.69.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+20.95.64.0,20.95.70.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.95.73.0,20.95.95.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.95.128.0,20.95.129.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.95.136.0,20.95.141.255,Microsoft Azure,http://www.windowsazure.com/en-us/
@@ -217,7 +217,7 @@
 20.150.0.0,20.152.15.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.157.0.0,20.157.100.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.157.109.0,20.157.206.255,Microsoft Azure,http://www.windowsazure.com/en-us/
-20.157.208.0,20.157.244.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+20.157.208.0,20.157.245.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.160.0.0,20.168.167.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.168.176.0,20.175.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.184.0.0,20.187.199.255,Microsoft Azure,http://www.windowsazure.com/en-us/
@@ -287,6 +287,7 @@
 23.253.0.0,23.253.255.255,Rackspace,http://www.rackspace.com/
 23.254.0.0,23.254.127.255,B2 NET Solutions,http://www.servermania.com/
 24.199.64.0,24.199.71.255,DigitalOcean,https://www.digitalocean.com/
+24.199.80.0,24.199.95.255,DigitalOcean,https://www.digitalocean.com/
 27.50.32.0,27.50.39.255,Hurricane Electric,http://www.he.net/
 27.131.64.0,27.131.127.254,Micron21,http://www.micron21.com/
 31.3.104.0,31.3.111.255,tuxis.nl,http://tuxis.nl/
@@ -586,11 +587,11 @@
 40.120.132.16,40.120.132.31,Microsoft Azure,http://www.windowsazure.com/en-us/
 40.120.136.0,40.120.139.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 40.121.0.0,40.123.136.255,Microsoft Azure,http://www.windowsazure.com/en-us/
-40.123.140.0,40.123.148.141,Microsoft Azure,http://www.windowsazure.com/en-us/
+40.123.140.0,40.123.148.149,Microsoft Azure,http://www.windowsazure.com/en-us/
 40.123.152.0,40.123.164.207,Microsoft Azure,http://www.windowsazure.com/en-us/
-40.123.168.0,40.123.169.179,Microsoft Azure,http://www.windowsazure.com/en-us/
+40.123.168.0,40.123.169.187,Microsoft Azure,http://www.windowsazure.com/en-us/
 40.123.172.0,40.123.172.119,Microsoft Azure,http://www.windowsazure.com/en-us/
-40.123.173.0,40.123.184.73,Microsoft Azure,http://www.windowsazure.com/en-us/
+40.123.173.0,40.123.184.97,Microsoft Azure,http://www.windowsazure.com/en-us/
 40.123.188.0,40.125.127.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 40.126.0.0,40.126.63.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 40.126.128.0,40.127.32.255,Microsoft Azure,http://www.windowsazure.com/en-us/
@@ -858,7 +859,7 @@
 52.252.0.0,52.253.143.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 52.253.148.0,52.253.239.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 52.254.0.0,52.255.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
-53.103.135.0,53.103.143.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+53.103.135.0,53.103.141.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 54.64.0.0,54.95.255.255,Amazon AWS,http://www.amazon.com/aws/
 54.144.0.0,54.181.255.255,Amazon AWS,http://www.amazon.com/aws/
 54.183.0.0,54.191.255.255,Amazon AWS,http://www.amazon.com/aws/
@@ -2275,7 +2276,7 @@
 146.148.2.0,146.148.127.255,Google Cloud,https://cloud.google.com/
 146.185.16.0,146.185.31.255,UK2 Group,http://www.100tb.com/
 146.185.128.0,146.185.191.255,DigitalOcean,https://www.digitalocean.com/
-146.190.0.0,146.190.79.255,DigitalOcean,https://www.digitalocean.com/
+146.190.0.0,146.190.95.255,DigitalOcean,https://www.digitalocean.com/
 146.190.192.0,146.190.203.255,DigitalOcean,https://www.digitalocean.com/
 146.190.208.0,146.190.255.255,DigitalOcean,https://www.digitalocean.com/
 146.255.24.0,146.255.31.255,Angel Hosting,http://www.angel-hosting.cz/
