@@ -1956,6 +1956,7 @@
 99.150.0.0,99.150.127.255,Amazon AWS,http://www.amazon.com/aws/
 99.151.64.0,99.151.159.255,Amazon AWS,http://www.amazon.com/aws/
 99.151.168.0,99.151.175.255,Amazon AWS,http://www.amazon.com/aws/
+99.151.184.0,99.151.185.255,Amazon AWS,http://www.amazon.com/aws/
 99.192.128.0,99.192.255.255,MojoHost,http://www.mojohost.com
 99.198.96.0,99.198.127.255,SingleHop,http://www.singlehop.com/
 100.20.0.0,100.31.255.255,Amazon AWS,http://www.amazon.com/aws/
