@@ -745,7 +745,7 @@
 52.94.144.0,52.94.146.255,Amazon AWS,http://www.amazon.com/aws/
 52.94.201.0,52.94.201.63,Amazon AWS,http://www.amazon.com/aws/
 52.94.248.0,52.94.248.239,Amazon AWS,http://www.amazon.com/aws/
-52.94.249.32,52.94.250.47,Amazon AWS,http://www.amazon.com/aws/
+52.94.249.32,52.94.250.63,Amazon AWS,http://www.amazon.com/aws/
 52.95.224.0,52.95.230.255,Amazon AWS,http://www.amazon.com/aws/
 52.95.235.0,52.95.235.255,Amazon AWS,http://www.amazon.com/aws/
 52.95.239.0,52.95.255.159,Amazon AWS,http://www.amazon.com/aws/
@@ -877,6 +877,7 @@
 54.239.103.128,54.239.103.191,Amazon AWS,http://www.amazon.com/aws/
 54.240.17.0,54.240.17.255,Amazon AWS,http://www.amazon.com/aws/
 54.241.0.0,54.255.255.255,Amazon AWS,http://www.amazon.com/aws/
+57.180.0.0,57.183.255.255,Amazon AWS,http://www.amazon.com/aws/
 58.64.185.0,58.64.185.255,NWT iDC Data Service,http://www.newworldtel.com/
 59.151.0.0,59.151.127.255,21vianet,http://21vianet.com/
 62.75.128.0,62.75.255.255,plusserver.de,http://plusserver.de/
