@@ -871,7 +871,6 @@
 54.222.128.0,54.229.255.255,Amazon AWS,http://www.amazon.com/aws/
 54.232.0.0,54.238.255.255,Amazon AWS,http://www.amazon.com/aws/
 54.239.103.128,54.239.103.191,Amazon AWS,http://www.amazon.com/aws/
-54.240.17.0,54.240.17.255,Amazon AWS,http://www.amazon.com/aws/
 54.241.0.0,54.255.255.255,Amazon AWS,http://www.amazon.com/aws/
 57.180.0.0,57.183.255.255,Amazon AWS,http://www.amazon.com/aws/
 58.64.185.0,58.64.185.255,NWT iDC Data Service,http://www.newworldtel.com/
@@ -2257,6 +2256,7 @@
 142.0.32.0,142.0.47.255,Volume Drive,http://volumedrive.com
 142.4.32.0,142.4.63.255,WebNX Internet Services,http://webnx.com/
 142.4.160.0,142.4.161.23,Amazon AWS,http://www.amazon.com/aws/
+142.4.177.0,142.4.177.255,Amazon AWS,http://www.amazon.com/aws/
 142.4.192.0,142.4.223.255,OVH,http://www.ovh.co.uk/
 142.11.192.0,142.11.255.255,hostwinds.com,http://www.hostwinds.com/
 142.54.160.0,142.54.191.255,Data Shack,https://www.datashack.net/
