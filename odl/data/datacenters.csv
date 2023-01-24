@@ -716,6 +716,7 @@
 51.103.0.0,51.103.192.63,Microsoft Azure,http://www.windowsazure.com/en-us/
 51.103.200.0,51.105.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 51.107.0.0,51.107.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+51.112.0.0,51.112.255.255,Amazon AWS,http://www.amazon.com/aws/
 51.116.0.0,51.116.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 51.120.0.0,51.120.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 51.124.0.0,51.124.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
