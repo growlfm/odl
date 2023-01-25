@@ -215,9 +215,10 @@
 20.135.0.0,20.135.240.127,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.135.242.0,20.136.5.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.136.128.0,20.136.129.127,Microsoft Azure,http://www.windowsazure.com/en-us/
-20.143.0.0,20.143.37.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+20.143.0.0,20.143.38.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+20.143.40.0,20.143.41.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.150.0.0,20.152.15.255,Microsoft Azure,http://www.windowsazure.com/en-us/
-20.157.0.0,20.157.105.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+20.157.0.0,20.157.106.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.157.109.0,20.157.206.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.157.208.0,20.157.249.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 20.160.0.0,20.175.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
@@ -340,7 +341,7 @@
 31.220.128.0,31.220.131.255,everhost,http://everhost.co/
 31.222.128.0,31.222.191.255,Rackspace,http://www.rackspace.com/
 34.0.32.0,34.0.47.255,Google Cloud,https://cloud.google.com/
-34.0.64.0,34.0.95.255,Google Cloud,https://cloud.google.com/
+34.0.64.0,34.0.127.255,Google Cloud,https://cloud.google.com/
 34.16.0.0,34.16.255.255,Google Cloud,https://cloud.google.com/
 34.19.0.0,34.22.63.255,Google Cloud,https://cloud.google.com/
 34.22.128.0,34.30.255.255,Google Cloud,https://cloud.google.com/
@@ -367,7 +368,7 @@
 34.128.64.0,34.128.191.255,Google Cloud,https://cloud.google.com/
 34.129.0.0,34.142.255.255,Google Cloud,https://cloud.google.com/
 34.143.128.0,34.143.255.255,Google Cloud,https://cloud.google.com/
-34.144.192.0,34.152.63.255,Google Cloud,https://cloud.google.com/
+34.144.192.0,34.152.67.255,Google Cloud,https://cloud.google.com/
 34.154.0.0,34.155.255.255,Google Cloud,https://cloud.google.com/
 34.157.0.0,34.157.9.255,Google Cloud,https://cloud.google.com/
 34.157.12.0,34.157.85.255,Google Cloud,https://cloud.google.com/
@@ -378,6 +379,7 @@
 34.157.220.0,34.157.247.255,Google Cloud,https://cloud.google.com/
 34.159.0.0,34.165.255.255,Google Cloud,https://cloud.google.com/
 34.168.0.0,34.176.255.255,Google Cloud,https://cloud.google.com/
+34.177.32.0,34.177.35.255,Google Cloud,https://cloud.google.com/
 34.192.0.0,34.255.255.255,Amazon AWS,http://www.amazon.com/aws/
 35.71.64.0,35.71.75.255,Amazon AWS,http://www.amazon.com/aws/
 35.71.96.0,35.71.121.255,Amazon AWS,http://www.amazon.com/aws/
