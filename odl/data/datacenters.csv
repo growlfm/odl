@@ -2489,7 +2489,6 @@
 172.64.0.0,172.71.255.255,Cloudflare Inc,https://www.cloudflare.com/
 172.96.128.0,172.96.135.255,Versaweb,https://versaweb.com/
 172.98.64.0,172.98.95.255,Total Server Solutions,http://totalserversolutions.com/
-172.103.41.0,172.103.41.255,Amazon AWS,http://www.amazon.com/aws/
 172.111.64.0,172.111.127.255,Fastly,https://www.fastly.com/
 172.122.0.0,172.123.255.255,KW Datacenter CA,http://www.kwdatacentre.com/
 172.160.0.0,172.187.63.255,Microsoft Azure,http://www.windowsazure.com/en-us/
