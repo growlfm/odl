@@ -2398,7 +2398,6 @@
 159.253.128.0,159.253.159.255,SoftLayer,http://www.softlayer.com/
 160.1.0.0,160.1.255.255,Amazon AWS,http://www.amazon.com/aws/
 161.35.0.0,161.35.255.255,DigitalOcean,https://www.digitalocean.com/
-161.188.128.0,161.188.161.255,Amazon AWS,http://www.amazon.com/aws/
 161.189.0.0,161.189.255.255,Amazon AWS,http://www.amazon.com/aws/
 161.202.0.0,161.202.255.255,SoftLayer,http://www.softlayer.com/
 162.158.0.0,162.159.255.255,Cloudflare Inc,https://www.cloudflare.com/
