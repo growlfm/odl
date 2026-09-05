@@ -1,4 +1,4 @@
-FROM python:3.8.14-slim-bullseye
+FROM python:3.10.21-slim-bookworm
 
 RUN apt-get update && apt-get install -y --no-install-recommends build-essential gcc
 
