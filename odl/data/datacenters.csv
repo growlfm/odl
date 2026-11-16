@@ -84,7 +84,7 @@
 4.251.24.128,4.251.235.63,Microsoft Azure,http://www.windowsazure.com/en-us/
 4.251.235.80,4.255.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 5.9.0.0,5.9.255.255,Hetzner Online AG,http://www.hetzner.de/
-5.10.64.0,5.10.127.255,SoftLayer,http://www.softlayer.com/
+5.10.96.0,5.10.127.255,SoftLayer,http://www.softlayer.com/
 5.34.182.0,5.34.183.255,UA Servers,https://itldc.com/
 5.34.240.0,5.34.244.255,webexxpurts.com,http://webexxpurts.com/
 5.34.247.0,5.34.247.255,webexxpurts.com,http://webexxpurts.com/
@@ -103,6 +103,7 @@
 5.79.36.0,5.79.37.255,Rackspace,http://www.rackspace.com/
 5.79.39.4,5.79.39.5,Rackspace,http://www.rackspace.com/
 5.79.64.0,5.79.123.255,Leaseweb,http://www.leaseweb.com/
+5.83.159.0,5.83.159.255,SoftLayer,http://www.softlayer.com/
 5.100.152.0,5.100.153.255,Confluence Networks Inc,http://confluence-networks.com/
 5.101.96.0,5.101.107.255,DigitalOcean,https://www.digitalocean.com/
 5.101.156.0,5.101.156.255,Beget,https://beget.com/en
@@ -114,7 +115,6 @@
 5.135.0.0,5.135.255.255,OVH,http://www.ovh.co.uk/
 5.144.163.120,5.144.166.255,seeweb.it,http://seeweb.it/
 5.152.192.0,5.152.223.255,Redstation Limited,http://redstation.com/
-5.153.0.0,5.153.63.255,SoftLayer,http://www.softlayer.com/
 5.174.0.0,5.174.255.255,Amazon AWS,http://www.amazon.com/aws/
 5.179.96.0,5.179.111.255,Amazon AWS,http://www.amazon.com/aws/
 5.183.76.0,5.183.77.255,Psychz Networks,http://psychz.net/
@@ -208,7 +208,11 @@
 13.105.233.0,13.105.233.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 13.106.2.0,13.106.3.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 13.112.0.0,13.115.255.255,Amazon AWS,http://www.amazon.com/aws/
+13.116.64.0,13.116.127.255,SoftLayer,http://www.softlayer.com/
 13.117.0.0,13.119.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+13.120.64.0,13.120.127.255,SoftLayer,http://www.softlayer.com/
+13.121.64.0,13.121.127.255,SoftLayer,http://www.softlayer.com/
+13.122.64.0,13.122.127.255,SoftLayer,http://www.softlayer.com/
 13.123.0.0,13.123.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 13.124.0.0,13.128.255.255,Amazon AWS,http://www.amazon.com/aws/
 13.130.0.0,13.130.255.255,Amazon AWS,http://www.amazon.com/aws/
@@ -264,7 +268,7 @@
 15.240.0.0,15.241.255.255,Amazon AWS,http://www.amazon.com/aws/
 15.252.0.0,15.254.255.255,Amazon AWS,http://www.amazon.com/aws/
 16.4.0.0,16.4.255.255,Amazon AWS,http://www.amazon.com/aws/
-16.15.0.0,16.15.123.255,Amazon AWS,http://www.amazon.com/aws/
+16.15.0.0,16.15.135.255,Amazon AWS,http://www.amazon.com/aws/
 16.15.156.0,16.16.255.255,Amazon AWS,http://www.amazon.com/aws/
 16.18.0.0,16.19.255.255,Amazon AWS,http://www.amazon.com/aws/
 16.22.0.0,16.22.255.255,Amazon AWS,http://www.amazon.com/aws/
@@ -377,7 +381,6 @@
 23.239.143.0,23.239.143.255,Root Level Technology,https://rootleveltech.com/
 23.239.192.0,23.239.223.255,wehostwebsites.com,http://wehostwebsites.com/
 23.244.0.0,23.245.255.255,Enzu USA,https://www.enzu.com/
-23.246.192.0,23.246.255.255,SoftLayer,http://www.softlayer.com/
 23.248.160.0,23.248.191.255,Zenlayer,http://www.zenlayer.com/
 23.250.76.0,23.250.76.255,Server Mania,http://www.servermania.com/
 23.250.98.0,23.250.98.255,Server Mania,http://www.servermania.com/
@@ -610,7 +613,6 @@
 37.48.64.0,37.48.120.255,Leaseweb,http://www.leaseweb.com/
 37.49.224.0,37.49.227.255,EstroWeb,http://www.estrowebservices.com/
 37.58.48.0,37.58.55.255,Leaseweb,http://www.leaseweb.com/
-37.58.64.0,37.58.127.255,SoftLayer,http://www.softlayer.com/
 37.59.0.0,37.59.255.255,OVH,http://www.ovh.co.uk/
 37.72.168.0,37.72.168.255,Swiftway,http://swiftway.net/
 37.72.171.0,37.72.171.255,Swiftway,http://swiftway.net/
@@ -806,6 +808,7 @@
 43.216.0.0,43.218.255.255,Amazon AWS,http://www.amazon.com/aws/
 43.220.0.0,43.220.255.255,Amazon AWS,http://www.amazon.com/aws/
 43.226.27.0,43.226.27.255,Amazon AWS,http://www.amazon.com/aws/
+43.245.168.0,43.245.168.255,SoftLayer,http://www.softlayer.com/
 43.246.114.0,43.246.115.255,Psychz Networks,http://psychz.net/
 43.249.72.0,43.249.75.255,Fastly,https://www.fastly.com/
 43.250.72.0,43.250.75.255,Psychz Networks,http://psychz.net/
@@ -969,7 +972,9 @@
 50.7.0.0,50.7.255.255,FDC Servers,http://fdcservers.net/
 50.16.0.0,50.19.255.255,Amazon AWS,http://www.amazon.com/aws/
 50.21.176.0,50.21.191.255,1&1 Internet,http://www.1and1.com/
-50.22.0.0,50.23.255.255,SoftLayer,http://www.softlayer.com/
+50.22.0.0,50.22.47.255,SoftLayer,http://www.softlayer.com/
+50.22.64.0,50.22.79.255,SoftLayer,http://www.softlayer.com/
+50.22.128.0,50.22.215.255,SoftLayer,http://www.softlayer.com/
 50.28.0.0,50.28.127.255,Liquid Web,http://www.liquidweb.com/
 50.30.32.0,50.30.47.255,Hosting Solutions International Inc,http://www.plusserver.de
 50.31.0.0,50.31.127.255,steadfast.net,http://steadfast.net/
@@ -979,7 +984,8 @@
 50.62.0.0,50.63.255.255,GoDaddy.com Inc,http://www.godaddy.com/
 50.85.0.0,50.85.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 50.87.0.0,50.87.255.255,Bluehost.com,http://www.bluehost.com/
-50.97.0.0,50.97.255.255,SoftLayer,http://www.softlayer.com/
+50.97.16.0,50.97.17.255,SoftLayer,http://www.softlayer.com/
+50.97.32.0,50.97.63.255,SoftLayer,http://www.softlayer.com/
 50.112.0.0,50.112.255.255,Amazon AWS,http://www.amazon.com/aws/
 50.114.57.0,50.114.57.255,Psychz Networks,http://psychz.net/
 50.114.198.0,50.114.198.255,Psychz Networks,http://psychz.net/
@@ -1075,6 +1081,7 @@
 52.114.104.0,52.114.115.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 52.114.120.0,52.114.126.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 52.114.128.0,52.115.247.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+52.116.0.0,52.118.255.255,SoftLayer,http://www.softlayer.com/
 52.119.205.0,52.119.205.255,Amazon AWS,http://www.amazon.com/aws/
 52.120.0.0,52.123.127.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 52.123.132.0,52.123.195.255,Microsoft Azure,http://www.windowsazure.com/en-us/
@@ -1151,6 +1158,7 @@
 58.64.185.0,58.64.185.255,NWT iDC Data Service,http://www.newworldtel.com/
 59.151.0.0,59.151.127.255,21vianet,http://21vianet.com/
 62.75.128.0,62.75.255.255,plusserver.de,http://plusserver.de/
+62.84.171.0,62.84.171.255,SoftLayer,http://www.softlayer.com/
 62.109.0.0,62.109.15.255,ISPserver,http://ispserver.com/
 62.109.28.0,62.109.31.255,The First,http://firstvds.ru/
 62.113.192.0,62.113.255.255,23Media,http://www.23media.eu/
@@ -1178,7 +1186,8 @@
 63.249.128.0,63.249.223.255,Amazon AWS,http://www.amazon.com/aws/
 64.4.8.0,64.4.8.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 64.4.54.0,64.4.54.255,Microsoft Azure,http://www.windowsazure.com/en-us/
-64.5.32.0,64.5.63.255,"ThePlanet.com Internet Services, Inc.",http://theplanet.com
+64.5.32.0,64.5.55.255,SoftLayer,http://www.softlayer.com/
+64.5.56.0,64.5.63.255,"ThePlanet.com Internet Services, Inc.",http://theplanet.com
 64.6.96.0,64.6.111.255,amerinoc,https://www.amerinoc.com/
 64.6.224.0,64.6.255.255,Jumpline Inc,http://www.jumpline.com/
 64.7.200.0,64.7.207.255,Amazon AWS,http://www.amazon.com/aws/
@@ -1329,6 +1338,7 @@
 66.36.0.0,66.36.10.255,Amazon AWS,http://www.amazon.com/aws/
 66.36.96.0,66.36.111.255,PEER 1,http://www.peer1.com/
 66.36.224.0,66.36.255.255,HopOne,http://www.hopone.net/
+66.37.96.0,66.37.96.255,SoftLayer,http://www.softlayer.com/
 66.39.0.0,66.39.159.255,Pair Networks,http://www.pair.com/
 66.40.0.0,66.40.255.255,PEER 1,http://www.peer1.com/
 66.45.224.0,66.45.255.255,InterServer.net,http://www.interserver.net/
@@ -1433,6 +1443,8 @@
 67.212.224.0,67.212.239.255,westhost,http://www.westhost.com/
 67.213.208.0,67.213.223.255,Midphase,http://www.midphase.com/
 67.214.160.0,67.214.191.255,ColoStore,http://colostore.com/
+67.214.212.0,67.214.212.255,SoftLayer,http://www.softlayer.com/
+67.214.223.0,67.214.223.255,SoftLayer,http://www.softlayer.com/
 67.215.112.0,67.215.127.255,Peak Web Hosting,http://www.peakwebhosting.com/
 67.215.160.0,67.215.191.255,Webhosting.net,http://www.webhosting.net/
 67.215.224.0,67.215.255.255,Secure Private Network,http://www.securedprivatenetwork.net/
@@ -1656,7 +1668,7 @@
 72.147.145.32,72.147.145.35,Microsoft Azure,http://www.windowsazure.com/en-us/
 72.147.145.40,72.147.145.47,Microsoft Azure,http://www.windowsazure.com/en-us/
 72.147.145.112,72.147.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
-72.150.0.0,72.150.20.255,Amazon AWS,http://www.amazon.com/aws/
+72.150.20.0,72.150.22.255,Amazon AWS,http://www.amazon.com/aws/
 72.152.0.0,72.152.23.31,Microsoft Azure,http://www.windowsazure.com/en-us/
 72.152.23.50,72.152.159.119,Microsoft Azure,http://www.windowsazure.com/en-us/
 72.152.159.124,72.152.159.127,Microsoft Azure,http://www.windowsazure.com/en-us/
@@ -1897,7 +1909,7 @@
 81.91.64.0,81.91.79.255,ecritel.net,http://www.ecritel.net/
 81.93.160.0,81.93.175.255,basefarm.com,http://basefarm.com/
 81.93.240.0,81.93.255.255,euro-web.com,http://fr.euro-web.com/
-81.95.144.0,81.95.159.255,SoftLayer,http://www.softlayer.com/
+81.95.144.0,81.95.144.255,SoftLayer,http://www.softlayer.com/
 81.169.128.0,81.169.255.255,Strato,http://www.strato.de
 81.176.224.0,81.176.225.255,eserver.ru,http://www.eserver.ru/
 81.177.26.0,81.177.27.255,erix-colo,http://
@@ -2029,6 +2041,7 @@
 89.34.96.0,89.34.99.255,Zare,https://zare.com/
 89.34.237.0,89.34.237.255,Zservers Romania,https://zetservers.com/
 89.36.21.0,89.36.21.255,simpliq.com,http://www.simpliq.com/
+89.38.52.0,89.38.54.255,SoftLayer,http://www.softlayer.com/
 89.39.104.0,89.39.107.255,WorldStream,https://www.worldstream.nl/
 89.42.144.0,89.42.147.255,XT Global Networks,https://xtglobal.vg/
 89.45.192.0,89.45.199.255,xservers.ro,http://www.xservers.ro/
@@ -2039,6 +2052,7 @@
 89.107.16.0,89.107.23.255,Telecity Group,http://www.ukgrid.net/
 89.108.121.0,89.108.121.255,Reg.ru,https://www.reg.ru/
 89.111.176.0,89.111.179.255,r01,https://r01.ru/
+89.144.43.0,89.144.43.255,SoftLayer,http://www.softlayer.com/
 89.145.90.0,89.145.90.255,Gyron,http://www.gyron.net/
 89.149.192.0,89.149.255.255,Leaseweb,http://www.leaseweb.com/
 89.163.128.0,89.163.255.255,unitedcolo.de,http://unitedcolo.de/
@@ -2373,12 +2387,17 @@
 103.31.4.0,103.31.7.255,Cloudflare Inc,https://www.cloudflare.com/
 103.36.96.0,103.36.96.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 103.45.228.0,103.45.231.255,ESC,https://esc.vn/
+103.53.196.0,103.53.196.255,SoftLayer,http://www.softlayer.com/
 103.59.108.0,103.59.110.255,Psychz Networks,http://psychz.net/
+103.70.48.0,103.70.48.255,SoftLayer,http://www.softlayer.com/
+103.106.108.0,103.106.108.255,SoftLayer,http://www.softlayer.com/
 103.126.136.0,103.126.139.255,Psychz Networks,http://psychz.net/
 103.130.179.0,103.130.179.255,Psychz Networks,http://psychz.net/
 103.136.220.0,103.136.223.255,TIKTOK PTE. LTD,https://www.bytedance.com/
 103.160.101.0,103.160.101.255,Psychz Networks,http://psychz.net/
+103.193.4.0,103.193.7.255,SoftLayer,http://www.softlayer.com/
 103.197.148.0,103.197.148.255,Trabia,https://www.trabia.com/
+103.197.160.0,103.197.163.255,SoftLayer,http://www.softlayer.com/
 103.231.184.0,103.231.184.255,Psychz Networks,http://psychz.net/
 103.244.50.0,103.244.50.255,Fastly,https://www.fastly.com/
 103.245.222.0,103.245.224.255,Fastly,https://www.fastly.com/
@@ -2422,6 +2441,8 @@
 104.199.242.0,104.199.255.255,Google Cloud,https://cloud.google.com/
 104.200.128.0,104.200.159.255,Total Server Solutions,http://totalserversolutions.com/
 104.207.128.0,104.207.159.255,Choopa,https://www.choopa.com/
+104.207.183.0,104.207.183.255,SoftLayer,http://www.softlayer.com/
+104.207.188.0,104.207.188.255,SoftLayer,http://www.softlayer.com/
 104.208.0.0,104.209.95.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 104.209.128.0,104.210.15.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 104.210.32.0,104.210.159.255,Microsoft Azure,http://www.windowsazure.com/en-us/
@@ -2494,7 +2515,8 @@
 108.166.0.0,108.166.127.255,Rackspace,http://www.rackspace.com/
 108.166.192.0,108.166.223.255,multacom.com,http://multacom.com/
 108.167.128.0,108.167.191.255,WebsiteWelcome.com,http://www.websitewelcome.com/
-108.168.128.0,108.168.255.255,SoftLayer,http://www.softlayer.com/
+108.168.128.0,108.168.191.255,SoftLayer,http://www.softlayer.com/
+108.168.254.0,108.168.255.255,SoftLayer,http://www.softlayer.com/
 108.170.0.0,108.170.63.255,Secure Servers,http://www.securedservers.com/
 108.171.160.0,108.171.191.255,Rackspace,http://www.rackspace.com/
 108.171.192.0,108.171.223.255,WebNX Internet Services,http://webnx.com/
@@ -2508,6 +2530,7 @@
 108.181.0.0,108.181.227.255,Psychz Networks,http://psychz.net/
 108.181.229.0,108.181.237.255,Psychz Networks,http://psychz.net/
 108.181.240.0,108.181.255.255,Psychz Networks,http://psychz.net/
+108.229.8.0,108.229.15.255,SoftLayer,http://www.softlayer.com/
 109.68.88.0,109.68.95.255,basefarm.com,http://basefarm.com/
 109.69.64.0,109.69.71.255,Plutex,http://www.plutex.de/
 109.70.0.0,109.70.7.255,Flexwebhosting.nl,http://www.flexwebhosting.nl/
@@ -2599,12 +2622,16 @@
 128.85.0.0,128.85.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 128.127.104.0,128.127.111.255,AltusHost,http://www.altushost.com/
 128.140.216.0,128.140.223.255,Flexwebhosting.nl,http://www.flexwebhosting.nl/
-128.168.0.0,128.168.255.255,Data 102,http://data102.com/
+128.168.0.0,128.168.127.255,SoftLayer,http://www.softlayer.com/
+128.168.128.0,128.168.255.255,Data 102,http://data102.com/
 128.199.0.0,128.199.255.255,DigitalOcean,https://www.digitalocean.com/
 128.203.0.0,128.203.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 128.204.194.0,128.204.207.255,Snel Internet Services B.V.,https://www.snelserver.com/
 128.204.208.0,128.204.215.255,ecritel.net,http://www.ecritel.net/
 128.251.0.0,128.251.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+129.35.190.0,129.35.190.255,SoftLayer,http://www.softlayer.com/
+129.41.128.0,129.41.159.255,SoftLayer,http://www.softlayer.com/
+129.41.224.0,129.41.255.255,SoftLayer,http://www.softlayer.com/
 130.33.0.0,130.33.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 130.51.120.0,130.51.120.255,Psychz Networks,http://psychz.net/
 130.107.0.0,130.107.90.127,Microsoft Azure,http://www.windowsazure.com/en-us/
@@ -2612,6 +2639,8 @@
 130.131.0.0,130.131.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 130.185.144.0,130.185.151.255,Titan Internet Ltd,http://www.titaninternet.co.uk/index.cfm
 130.185.152.0,130.185.155.255,webexxpurts.com,http://webexxpurts.com/
+130.198.0.0,130.198.31.255,SoftLayer,http://www.softlayer.com/
+130.198.64.0,130.198.127.255,SoftLayer,http://www.softlayer.com/
 130.211.4.0,130.211.255.255,Google Cloud,https://cloud.google.com/
 130.213.0.0,130.213.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 131.0.72.0,131.0.75.255,Cloudflare Inc,https://www.cloudflare.com/
@@ -2655,6 +2684,7 @@
 135.13.0.0,135.13.152.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 135.13.153.64,135.13.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 135.18.0.0,135.18.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+135.90.64.0,135.90.191.255,SoftLayer,http://www.softlayer.com/
 135.112.0.0,135.112.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 135.116.0.0,135.116.171.55,Microsoft Azure,http://www.windowsazure.com/en-us/
 135.116.171.64,135.116.171.159,Microsoft Azure,http://www.windowsazure.com/en-us/
@@ -2721,6 +2751,7 @@
 141.98.47.0,141.98.47.255,Psychz Networks,http://psychz.net/
 141.101.64.0,141.101.127.255,Cloudflare Inc,https://www.cloudflare.com/
 141.105.64.0,141.105.71.255,HostKey,http://www.hostkey.com/
+141.125.64.0,141.125.191.255,SoftLayer,http://www.softlayer.com/
 141.138.136.0,141.138.143.255,transip,https://www.transip.nl/
 141.230.0.0,141.230.255.255,Amazon AWS,http://www.amazon.com/aws/
 142.0.32.0,142.0.47.255,Volume Drive,http://volumedrive.com
@@ -2738,6 +2769,7 @@
 143.244.196.0,143.244.215.255,DigitalOcean,https://www.digitalocean.com/
 143.244.218.0,143.244.218.255,DigitalOcean,https://www.digitalocean.com/
 143.244.220.0,143.244.223.255,DigitalOcean,https://www.digitalocean.com/
+144.69.0.0,144.69.127.255,SoftLayer,http://www.softlayer.com/
 144.126.192.0,144.126.255.255,DigitalOcean,https://www.digitalocean.com/
 144.168.160.0,144.168.167.255,Server Mania,http://www.servermania.com/
 144.172.68.0,144.172.69.255,Psychz Networks,http://psychz.net/
@@ -2774,15 +2806,19 @@
 147.189.135.0,147.189.135.255,Psychz Networks,http://psychz.net/
 147.203.0.0,147.203.255.255,American Internet Services,http://americanis.net/
 147.255.0.0,147.255.255.255,Ubiquity Server Solutions,http://www.ubiquityservers.com/
+148.59.154.0,148.59.154.255,SoftLayer,http://www.softlayer.com/
 148.251.0.0,148.251.255.255,Hetzner Online AG,http://www.hetzner.de/
 149.3.128.0,149.3.143.255,Redstation Limited,http://redstation.com/
 149.18.120.0,149.18.127.255,Psychz Networks,http://psychz.net/
+149.81.0.0,149.81.255.255,SoftLayer,http://www.softlayer.com/
 149.128.64.0,149.128.127.255,Amazon AWS,http://www.amazon.com/aws/
 149.154.152.0,149.154.159.255,EDIS,http://www.edis.at/
 149.202.0.0,149.202.255.255,OVH,https://www.ovh.co.uk/
 149.210.164.0,149.210.164.255,TransIP,https://www.transip.nl/
 149.255.32.0,149.255.39.255,Swiftway,http://swiftway.net/
+150.112.64.0,150.112.127.255,SoftLayer,http://www.softlayer.com/
 150.206.0.0,150.206.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+150.238.0.0,150.240.255.255,SoftLayer,http://www.softlayer.com/
 151.1.0.0,151.2.255.255,IT.NET,https://www.it.net/
 151.80.128.0,151.80.159.255,OVH FR,https://www.ovh.ie/
 151.98.0.0,151.98.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
@@ -2854,28 +2890,33 @@
 158.23.0.0,158.23.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 158.58.168.0,158.58.171.255,SeFlow.it Internet Services,http://seflow.net/
 158.69.0.0,158.69.255.255,OVH CA,https://www.ovh.com/ca/en/
-158.85.0.0,158.85.255.255,SoftLayer,http://www.softlayer.com/
+158.85.64.0,158.85.127.255,SoftLayer,http://www.softlayer.com/
 158.158.0.0,158.158.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+158.175.64.0,158.175.191.255,SoftLayer,http://www.softlayer.com/
+158.176.0.0,158.177.255.255,SoftLayer,http://www.softlayer.com/
 158.222.0.0,158.222.15.255,Netirons,http://netirons.com/
+158.231.64.0,158.231.127.255,SoftLayer,http://www.softlayer.com/
 158.252.0.0,158.253.255.255,Amazon AWS,http://www.amazon.com/aws/
 158.255.0.0,158.255.7.255,HostKey,http://www.hostkey.com/
 158.255.40.0,158.255.47.255,eukhost.com,http://eukhost.com/
 158.255.208.0,158.255.215.255,EDIS,http://www.edis.at/
-159.8.0.0,159.8.255.255,SoftLayer,http://www.softlayer.com/
+159.8.64.0,159.8.255.255,SoftLayer,http://www.softlayer.com/
+159.23.64.0,159.23.127.255,SoftLayer,http://www.softlayer.com/
 159.65.0.0,159.65.255.255,DigitalOcean,https://www.digitalocean.com/
 159.89.0.0,159.89.55.255,DigitalOcean,https://www.digitalocean.com/
 159.89.64.0,159.89.255.255,DigitalOcean,https://www.digitalocean.com/
-159.122.0.0,159.122.255.255,SoftLayer,http://www.softlayer.com/
+159.122.64.0,159.122.255.255,SoftLayer,http://www.softlayer.com/
 159.203.0.0,159.203.255.255,DigitalOcean,https://www.digitalocean.com/
 159.223.0.0,159.223.239.255,DigitalOcean,https://www.digitalocean.com/
 159.248.200.0,159.248.207.255,Amazon AWS,http://www.amazon.com/aws/
 159.248.216.0,159.248.247.255,Amazon AWS,http://www.amazon.com/aws/
 159.253.24.0,159.253.31.255,GleSys,http://glesys.se/
 159.253.56.0,159.253.63.255,host-it.co.uk,http://www.host-it.co.uk/
-159.253.128.0,159.253.159.255,SoftLayer,http://www.softlayer.com/
+159.253.128.0,159.253.151.255,SoftLayer,http://www.softlayer.com/
 160.1.0.0,160.1.255.255,Amazon AWS,http://www.amazon.com/aws/
 161.35.0.0,161.35.255.255,DigitalOcean,https://www.digitalocean.com/
 161.66.0.0,161.66.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+161.156.0.0,161.156.255.255,SoftLayer,http://www.softlayer.com/
 161.178.0.0,161.178.63.255,Amazon AWS,http://www.amazon.com/aws/
 161.178.128.0,161.178.191.255,Amazon AWS,http://www.amazon.com/aws/
 161.188.0.0,161.188.95.255,Amazon AWS,http://www.amazon.com/aws/
@@ -2884,7 +2925,11 @@
 161.189.0.0,161.189.255.255,Amazon AWS,http://www.amazon.com/aws/
 161.193.0.0,161.193.63.255,Amazon AWS,http://www.amazon.com/aws/
 161.193.128.0,161.193.191.255,Amazon AWS,http://www.amazon.com/aws/
-161.202.0.0,161.202.255.255,SoftLayer,http://www.softlayer.com/
+161.199.16.0,161.199.16.255,SoftLayer,http://www.softlayer.com/
+161.199.86.0,161.199.86.255,SoftLayer,http://www.softlayer.com/
+161.202.0.0,161.202.31.255,SoftLayer,http://www.softlayer.com/
+161.202.64.0,161.202.255.255,SoftLayer,http://www.softlayer.com/
+162.133.64.0,162.133.191.255,SoftLayer,http://www.softlayer.com/
 162.158.0.0,162.159.255.255,Cloudflare Inc,https://www.cloudflare.com/
 162.208.8.0,162.208.11.255,vpscheap.net,http://vpscheap.net/
 162.209.0.0,162.209.127.255,Rackspace,http://www.rackspace.com/
@@ -2927,6 +2972,15 @@
 162.250.236.0,162.250.239.255,Amazon AWS,http://www.amazon.com/aws/
 162.252.240.0,162.252.243.255,KW Datacenter CA,http://www.kwdatacentre.com/
 163.47.8.0,163.47.11.255,DigitalOcean,https://www.digitalocean.com/
+163.66.64.0,163.66.127.255,SoftLayer,http://www.softlayer.com/
+163.68.64.0,163.68.127.255,SoftLayer,http://www.softlayer.com/
+163.69.64.0,163.69.127.255,SoftLayer,http://www.softlayer.com/
+163.73.64.0,163.73.127.255,SoftLayer,http://www.softlayer.com/
+163.74.64.0,163.74.127.255,SoftLayer,http://www.softlayer.com/
+163.75.64.0,163.75.127.255,SoftLayer,http://www.softlayer.com/
+163.102.64.0,163.102.127.255,SoftLayer,http://www.softlayer.com/
+163.107.64.0,163.107.127.255,SoftLayer,http://www.softlayer.com/
+163.109.64.0,163.109.127.255,SoftLayer,http://www.softlayer.com/
 164.40.133.0,164.40.133.255,GoGrid LLC,http://www.gogrid.com/
 164.40.144.0,164.40.144.255,GoGrid LLC,http://www.gogrid.com/
 164.40.147.0,164.40.147.255,GoGrid LLC,http://www.gogrid.com/
@@ -2937,6 +2991,8 @@
 164.177.128.0,164.177.159.255,Rackspace,http://www.rackspace.com/
 165.22.0.0,165.22.255.255,DigitalOcean,https://www.digitalocean.com/
 165.73.240.0,165.73.255.255,Psychz Networks,http://psychz.net/
+165.181.254.0,165.181.255.255,SoftLayer,http://www.softlayer.com/
+165.192.64.0,165.192.191.255,SoftLayer,http://www.softlayer.com/
 165.227.0.0,165.227.255.255,DigitalOcean,https://www.digitalocean.com/
 165.231.210.0,165.231.210.255,Psychz Networks,http://psychz.net/
 165.232.32.0,165.232.191.255,DigitalOcean,https://www.digitalocean.com/
@@ -2949,28 +3005,39 @@
 167.82.160.0,167.82.175.255,Fastly,https://www.fastly.com/
 167.82.224.0,167.82.239.255,Fastly,https://www.fastly.com/
 167.88.32.0,167.88.47.255,KW Datacenter CA,http://www.kwdatacentre.com/
+167.94.160.0,167.94.160.255,SoftLayer,http://www.softlayer.com/
 167.99.0.0,167.99.255.255,DigitalOcean,https://www.digitalocean.com/
 167.105.0.0,167.105.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 167.160.32.0,167.160.63.255,Web2Objects,https://web2objects.com/
 167.172.0.0,167.172.255.255,DigitalOcean,https://www.digitalocean.com/
 167.253.140.0,167.253.141.255,Psychz Networks,http://psychz.net/
 167.253.143.0,167.253.143.255,Psychz Networks,http://psychz.net/
-168.1.0.0,168.1.255.255,SoftLayer,http://www.softlayer.com/
+168.1.0.0,168.1.127.255,SoftLayer,http://www.softlayer.com/
+168.1.192.0,168.1.255.255,SoftLayer,http://www.softlayer.com/
 168.61.0.0,168.63.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
 168.185.4.0,168.185.7.255,Amazon AWS,http://www.amazon.com/aws/
 168.197.12.0,168.197.15.255,Imperanet,http://imperanet.com.br/
 168.235.144.0,168.235.159.255,CLOUD-52 (KW Datacenter),http://www.kwdatacentre.com/
-169.38.64.0,169.38.127.255,SoftLayer,http://www.softlayer.com/
-169.44.0.0,169.47.63.255,SoftLayer,http://www.softlayer.com/
-169.50.0.0,169.50.191.255,SoftLayer,http://www.softlayer.com/
-169.51.0.0,169.51.31.255,SoftLayer,http://www.softlayer.com/
-169.51.64.0,169.51.127.255,SoftLayer,http://www.softlayer.com/
-169.53.0.0,169.55.255.255,SoftLayer,http://www.softlayer.com/
-169.56.64.0,169.56.159.255,SoftLayer,http://www.softlayer.com/
-169.57.0.0,169.57.255.255,SoftLayer,http://www.softlayer.com/
+169.38.0.0,169.38.47.255,SoftLayer,http://www.softlayer.com/
+169.38.64.0,169.38.239.255,SoftLayer,http://www.softlayer.com/
+169.44.0.0,169.45.15.255,SoftLayer,http://www.softlayer.com/
+169.45.20.0,169.45.23.255,SoftLayer,http://www.softlayer.com/
+169.45.32.0,169.48.32.255,SoftLayer,http://www.softlayer.com/
+169.48.36.0,169.48.39.255,SoftLayer,http://www.softlayer.com/
+169.48.64.0,169.48.255.255,SoftLayer,http://www.softlayer.com/
+169.50.0.0,169.51.63.255,SoftLayer,http://www.softlayer.com/
+169.51.128.0,169.51.191.255,SoftLayer,http://www.softlayer.com/
+169.53.0.0,169.53.63.255,SoftLayer,http://www.softlayer.com/
+169.53.160.0,169.53.255.255,SoftLayer,http://www.softlayer.com/
+169.54.64.0,169.54.127.255,SoftLayer,http://www.softlayer.com/
+169.54.192.0,169.56.63.255,SoftLayer,http://www.softlayer.com/
+169.57.128.0,169.57.255.255,SoftLayer,http://www.softlayer.com/
+169.59.0.0,169.63.255.255,SoftLayer,http://www.softlayer.com/
 170.39.52.0,170.39.55.255,Psychz Networks,http://psychz.net/
 170.64.128.0,170.64.159.255,DigitalOcean,https://www.digitalocean.com/
 170.64.248.0,170.64.255.255,DigitalOcean,https://www.digitalocean.com/
+170.225.114.0,170.225.114.255,SoftLayer,http://www.softlayer.com/
+170.225.160.0,170.225.160.255,SoftLayer,http://www.softlayer.com/
 172.64.0.0,172.71.255.255,Cloudflare Inc,https://www.cloudflare.com/
 172.83.178.0,172.83.184.255,Psychz Networks,http://psychz.net/
 172.84.184.0,172.84.187.255,Psychz Networks,http://psychz.net/
@@ -3012,8 +3079,9 @@
 173.44.128.0,173.44.255.255,infinitie.net,http://www.serverhub.com/
 173.45.224.0,173.45.255.255,Rackspace,http://www.rackspace.com/
 173.83.192.0,173.83.240.255,Amazon AWS,http://www.amazon.com/aws/
-173.192.0.0,173.192.245.255,SoftLayer,http://www.softlayer.com/
-173.192.248.0,173.193.255.255,SoftLayer,http://www.softlayer.com/
+173.192.0.0,173.192.127.255,SoftLayer,http://www.softlayer.com/
+173.192.248.0,173.193.63.255,SoftLayer,http://www.softlayer.com/
+173.193.128.0,173.193.191.255,SoftLayer,http://www.softlayer.com/
 173.195.0.0,173.195.15.255,Reliable Hosting,http://reliablehosting.com/
 173.195.64.0,173.195.79.255,Fastmetrics,http://fastmetrics.com/
 173.198.192.0,173.198.255.255,Turnkey Internet,http://turnkeyinternet.net/
@@ -3057,6 +3125,9 @@
 173.245.48.0,173.245.63.255,Cloudflare Inc,https://www.cloudflare.com/
 173.245.64.0,173.245.95.255,EGIHosting.com,http://www.egihosting.com/
 173.246.96.0,173.246.111.255,Gandi.net US,http://www.gandi.net/
+173.247.105.0,173.247.105.255,SoftLayer,http://www.softlayer.com/
+173.247.107.0,173.247.107.255,SoftLayer,http://www.softlayer.com/
+173.247.115.0,173.247.115.255,SoftLayer,http://www.softlayer.com/
 173.248.128.0,173.248.191.255,wehostwebsites.com,http://wehostwebsites.com/
 173.248.192.0,173.248.255.255,Canaca-com Inc.,http://canaca.com
 173.249.144.0,173.249.159.255,Future Hosting Inc,http://vpsdatacenter.com/
@@ -3068,12 +3139,14 @@
 173.255.160.0,173.255.191.255,Reliable Hosting,http://reliablehosting.com/
 173.255.192.0,173.255.255.255,Linode,http://www.linode.com/
 174.34.128.0,174.34.191.255,Ubiquity Server Solutions,http://www.ubiquityservers.com/
-174.36.0.0,174.37.255.255,SoftLayer,http://www.softlayer.com/
-174.120.0.0,174.123.255.255,"ThePlanet.com Internet Services, Inc.",http://theplanet.com
+174.36.0.0,174.36.191.255,SoftLayer,http://www.softlayer.com/
+174.37.0.0,174.37.191.255,SoftLayer,http://www.softlayer.com/
+174.120.0.0,174.123.255.255,SoftLayer,http://www.softlayer.com/
 174.127.64.0,174.127.127.255,Midphase,http://www.midphase.com/
 174.128.224.0,174.128.255.255,SharkTECH Internet Services,http://sharktech.net/
 174.129.0.0,174.129.255.255,Amazon AWS,http://www.amazon.com/aws/
-174.132.0.0,174.133.255.255,"ThePlanet.com Internet Services, Inc.",http://theplanet.com
+174.132.0.0,174.132.255.255,Microsoft Azure,http://www.windowsazure.com/en-us/
+174.133.0.0,174.133.255.255,SoftLayer,http://www.softlayer.com/
 174.136.0.0,174.136.63.255,colo4dallas.com,http://colo4dallas.com/
 174.137.48.0,174.137.63.255,Carat Networks,http://www.caratnetworks.com/
 174.137.128.0,174.137.191.255,Webair Internet Development Inc,http://www.webair.com/
@@ -3286,6 +3359,7 @@
 185.12.4.0,185.12.4.255,CloudSigma,https://www.cloudsigma.com/
 185.12.6.0,185.12.6.255,CloudSigma,https://www.cloudsigma.com/
 185.12.64.0,185.12.67.255,Hetzner Online AG,http://www.hetzner.de/
+185.13.57.0,185.13.59.255,SoftLayer,http://www.softlayer.com/
 185.14.28.0,185.14.29.255,UA Servers,https://itldc.com/
 185.14.184.0,185.14.187.255,DigitalOcean,https://www.digitalocean.com/
 185.14.194.0,185.14.194.127,Atomohost,http://www.atomohost.com/
@@ -3335,6 +3409,7 @@
 185.126.181.0,185.126.181.255,Psychz Networks,http://psychz.net/
 185.139.144.0,185.139.147.255,BHost Inc,https://www.bhost.net/
 185.143.243.0,185.143.243.255,Psychz Networks,http://psychz.net/
+185.150.176.0,185.150.177.255,SoftLayer,http://www.softlayer.com/
 185.158.112.0,185.158.115.255,IP Server,https://www.ipserver.su/
 185.161.148.0,185.161.148.255,Psychz Networks,http://psychz.net/
 185.162.130.0,185.162.130.255,King Servers,https://www.king-servers.com/
@@ -3347,6 +3422,8 @@
 185.224.136.0,185.224.137.255,Hostinger,https://www.hostinger.com/
 185.225.4.0,185.225.5.255,Psychz Networks,http://psychz.net/
 185.225.7.0,185.225.7.255,Psychz Networks,http://psychz.net/
+185.228.36.0,185.228.39.255,SoftLayer,http://www.softlayer.com/
+185.228.68.0,185.228.71.255,SoftLayer,http://www.softlayer.com/
 185.239.50.0,185.239.50.255,MGNHost,https://www.mgnhost.ru/
 186.227.162.128,186.227.162.191,Server Green,http://servergreen.com.br/
 186.242.0.0,186.242.63.255,Google Cloud,https://cloud.google.com/
@@ -3446,6 +3523,7 @@
 192.96.200.0,192.96.207.255,Leaseweb,http://www.leaseweb.com/
 192.99.0.0,192.99.255.255,OVH,http://www.ovh.co.uk/
 192.101.69.0,192.101.69.255,Psychz Networks,http://psychz.net/
+192.107.243.0,192.107.243.255,SoftLayer,http://www.softlayer.com/
 192.109.201.0,192.109.201.255,Psychz Networks,http://psychz.net/
 192.110.160.0,192.110.167.255,Input Output Flood LLC,http://ioflood.com/
 192.111.128.0,192.111.143.255,Total Server Solutions,http://totalserversolutions.com/
@@ -3457,7 +3535,6 @@
 192.151.144.0,192.151.159.255,Data Shack,https://www.datashack.net/
 192.154.96.0,192.154.111.255,Gorilla Servers,http://gorillaservers.com/
 192.155.80.0,192.155.95.255,Linode,http://www.linode.com/
-192.155.192.0,192.155.255.255,SoftLayer,http://www.softlayer.com/
 192.157.36.0,192.157.36.255,Amazon AWS,http://www.amazon.com/aws/
 192.158.28.0,192.158.31.255,Google Cloud,https://cloud.google.com/
 192.161.48.0,192.161.63.255,QuadraNet,https://quadranet.com/
@@ -3646,13 +3723,13 @@
 197.234.240.0,197.234.243.255,Cloudflare Inc,https://www.cloudflare.com/
 198.7.56.0,198.7.63.255,Leaseweb,http://www.leaseweb.com/
 198.8.80.0,198.8.95.255,colo@,http://coloat.com/
-198.11.192.0,198.11.255.255,SoftLayer,http://www.softlayer.com/
 198.12.12.0,198.12.15.255,awknet,http://awknet.com/
 198.12.64.0,198.12.127.255,ColoCrossing,http://www.colocrossing.com/
 198.15.64.0,198.15.127.255,Secure Servers,http://www.securedservers.com/
 198.16.4.0,198.16.7.255,Packet Host,https://www.packet.net/
 198.20.64.0,198.20.127.255,SingleHop,http://www.singlehop.com/
-198.23.64.0,198.23.127.255,SoftLayer,http://www.softlayer.com/
+198.23.96.0,198.23.107.255,SoftLayer,http://www.softlayer.com/
+198.23.112.0,198.23.127.255,SoftLayer,http://www.softlayer.com/
 198.23.128.0,198.23.255.255,ColoCrossing,http://www.colocrossing.com/
 198.24.128.0,198.24.191.255,Secure Servers,http://www.securedservers.com/
 198.27.64.0,198.27.127.255,OVH,http://www.ovh.co.uk/
@@ -3725,6 +3802,8 @@
 199.19.208.0,199.19.211.255,Connectria,http://www.connectria.com/
 199.19.212.0,199.19.215.255,vexxhost web hosting,http://vexxhost.com/
 199.19.224.0,199.19.227.255,buyvm.net,http://buyvm.net/?from=frantech
+199.20.36.0,199.20.36.255,SoftLayer,http://www.softlayer.com/
+199.20.38.0,199.20.39.255,SoftLayer,http://www.softlayer.com/
 199.21.112.0,199.21.115.255,ColoCrossing,http://www.colocrossing.com/
 199.26.84.0,199.26.87.255,dfw-datacenter.com,http://dfw-datacenter.com/
 199.27.72.0,199.27.79.255,Fastly,https://www.fastly.com/
@@ -3795,6 +3874,7 @@
 199.180.128.0,199.180.135.255,Virpus Networks,http://myvirpus.com/
 199.180.184.0,199.180.187.255,Firehost,http://www.firehost.com/
 199.180.196.0,199.180.199.255,SWITCH Communications Group LLC,http://www.switchnap.com/
+199.187.172.0,199.187.175.255,SoftLayer,http://www.softlayer.com/
 199.187.208.0,199.187.211.255,colo@,http://coloat.com/
 199.188.100.0,199.188.103.255,ColoCrossing,http://www.colocrossing.com/
 199.188.220.0,199.188.223.255,PlanetHoster,http://www.planethoster.net/
@@ -3831,6 +3911,7 @@
 199.233.180.0,199.233.180.255,XMission,http://xmission.com/
 199.241.136.0,199.241.143.255,fiberhub.com,http://www.fiberhub.com/
 199.241.144.0,199.241.147.255,hugeserver,http://www.hugeserver.com/
+199.244.72.0,199.244.75.255,SoftLayer,http://www.softlayer.com/
 199.244.112.0,199.244.119.255,hugeserver,http://www.hugeserver.com/
 199.245.56.0,199.245.63.255,Zenlayer,http://www.zenlayer.com/
 200.35.144.0,200.35.151.255,ServerPronto,http://www.serverpronto.com/
@@ -3865,6 +3946,7 @@
 202.168.208.0,202.168.215.255,Datapipe,http://www.datapipe.com/
 202.174.132.0,202.174.135.255,Amazon AWS,http://www.amazon.com/aws/
 203.19.59.0,203.19.59.255,Digital Pacific,http://www.digitalpacific.com.au/
+203.57.74.0,203.57.75.255,SoftLayer,http://www.softlayer.com/
 203.77.184.0,203.77.191.255,Limelight Networks Inc,http://www.limelight.com/
 203.84.240.0,203.84.255.255,kinx.net,http://idc.kinx.net/
 203.123.59.0,203.123.59.255,Digital Pacific,http://www.digitalpacific.com.au/
@@ -3955,6 +4037,7 @@
 206.225.92.0,206.225.95.255,Codero,http://www.codero.com/
 206.251.224.0,206.251.255.255,American Internet Services,http://americanis.net/
 206.252.128.0,206.252.159.255,LogicWorks,http://www.logicworks.net/
+206.253.232.0,206.253.239.255,SoftLayer,http://www.softlayer.com/
 207.7.80.0,207.7.95.255,PrivateSystems.net,http://privatesystems.net/
 207.21.192.0,207.21.255.255,PEER 1,http://www.peer1.com/
 207.38.0.0,207.38.47.255,latisys,http://www.latisys.com/
@@ -4000,10 +4083,14 @@
 207.223.32.0,207.223.47.255,latisys,http://www.latisys.com/
 207.228.224.0,207.228.255.255,HopOne,http://www.hopone.net/
 207.231.104.0,207.231.109.255,Psychz Networks,http://psychz.net/
+207.231.148.0,207.231.149.255,SoftLayer,http://www.softlayer.com/
+207.231.152.0,207.231.153.255,SoftLayer,http://www.softlayer.com/
+207.231.156.0,207.231.159.255,SoftLayer,http://www.softlayer.com/
 207.244.64.0,207.244.127.255,Leaseweb USA,https://www.leaseweb.com/
 207.246.64.0,207.246.127.255,Choopa,https://www.choopa.com/
 208.42.224.0,208.42.255.255,latisys,http://www.latisys.com/
-208.43.0.0,208.43.255.255,SoftLayer,http://www.softlayer.com/
+208.43.0.0,208.43.63.255,SoftLayer,http://www.softlayer.com/
+208.43.128.0,208.43.255.255,SoftLayer,http://www.softlayer.com/
 208.53.128.0,208.53.191.255,FDC Servers,http://fdcservers.net/
 208.54.240.0,208.54.255.255,latisys,http://www.latisys.com/
 208.64.24.0,208.64.31.255,VersaWeb,http://www.versaweb.com/
@@ -4136,6 +4223,7 @@
 209.80.0.0,209.80.63.255,latisys,http://www.latisys.com/
 209.81.64.0,209.81.95.255,LogicWorks,http://www.logicworks.net/
 209.85.0.0,209.85.127.255,"ThePlanet.com Internet Services, Inc.",http://theplanet.com
+209.90.46.0,209.90.46.255,SoftLayer,http://www.softlayer.com/
 209.95.96.0,209.95.127.255,PEER 1,http://www.peer1.com/
 209.97.128.0,209.97.191.255,DigitalOcean,https://www.digitalocean.com/
 209.97.192.0,209.97.223.255,RackForce,http://www.rockforce.com/
@@ -4318,7 +4406,8 @@
 216.122.0.0,216.122.255.255,PEER 1,http://www.peer1.com/
 216.126.56.0,216.126.56.255,Psychz Networks,http://psychz.net/
 216.126.59.0,216.126.59.255,Psychz Networks,http://psychz.net/
-216.127.64.0,216.127.95.255,"ThePlanet.com Internet Services, Inc.",http://theplanet.com
+216.127.64.0,216.127.67.255,SoftLayer,http://www.softlayer.com/
+216.127.68.0,216.127.95.255,"ThePlanet.com Internet Services, Inc.",http://theplanet.com
 216.127.160.0,216.127.191.255,multacom.com,http://multacom.com/
 216.130.160.0,216.130.191.255,Webair Internet Development Inc,http://www.webair.com/
 216.131.64.0,216.131.127.255,Reliable Hosting,http://reliablehosting.com/
@@ -4338,7 +4427,7 @@
 216.182.80.0,216.182.95.255,Adhost,http://www.adhost.com/
 216.182.176.0,216.182.191.255,LightEdge,http://www.lightedge.com
 216.182.224.0,216.182.239.255,Amazon AWS,http://www.amazon.com/aws/
-216.185.96.0,216.185.127.255,"ThePlanet.com Internet Services, Inc.",http://theplanet.com
+216.185.96.0,216.185.127.255,SoftLayer,http://www.softlayer.com/
 216.185.129.0,216.185.130.255,Hostway,http://www.hostway.com/
 216.187.64.0,216.187.127.255,PEER 1,http://www.peer1.com/
 216.189.144.0,216.189.159.255,Host US,http://hostus.us/
@@ -4355,6 +4444,8 @@
 216.230.96.0,216.230.127.255,Datapoint,http://www.datapointinc.com/
 216.230.192.0,216.230.223.255,Hostway,http://www.hostway.com/
 216.231.128.0,216.231.143.255,Continuum Data Centers,http://www.continuumdatacenters.com/
+216.234.224.0,216.234.224.255,SoftLayer,http://www.softlayer.com/
+216.234.226.0,216.234.227.255,SoftLayer,http://www.softlayer.com/
 216.234.250.0,216.234.250.255,"ThePlanet.com Internet Services, Inc.",http://theplanet.com
 216.238.64.0,216.238.127.255,Razor,http://www.razorservers.com/
 216.238.144.0,216.238.159.255,gorack.net,http://gorack.net/
